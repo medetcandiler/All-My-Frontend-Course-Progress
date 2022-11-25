@@ -1,9 +1,9 @@
 # All my front-end course progress with Hakan Yalçınkaya on Patika.dev
-## Hakkımda
+## About me
 
-[Patika.dev profilim](https://app.patika.dev/meddo)
+[ My Patika.dev account](https://app.patika.dev/meddo)
 
-[linkedin profilim](https://www.linkedin.com/in/medetcandiler/)
+[Mu linkedin account](https://www.linkedin.com/in/medetcandiler/)
 
 
 
