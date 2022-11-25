@@ -3,5 +3,7 @@
 
 [Patika.dev profilim](https://app.patika.dev/meddo)
 
+[linkedin profilim](https://www.linkedin.com/in/medetcandiler/)
+
 
 
