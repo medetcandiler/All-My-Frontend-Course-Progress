@@ -3,7 +3,7 @@
 
 [ My Patika.dev account](https://app.patika.dev/meddo)
 
-[Mu linkedin account](https://www.linkedin.com/in/medetcandiler/)
+[My linkedin account](https://www.linkedin.com/in/medetcandiler/)
 
 
 
