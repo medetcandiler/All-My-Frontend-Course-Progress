@@ -5,18 +5,20 @@ table, th, td{
 table{
     width: 50%;
     margin: 0 auto;
-    font: 1.5em;
-    
+    font-size: 1.5em;
 }
-thead tr{
-    background-color: red;
+thead th{
+    background-color: green;
+    color: white;
+
 }
-tbody tr{
-    background-color: aquamarine;
+tbody td{
+    text-align: center;
+
 }
-td, th{
-    padding: 10px;
-}
-td:hover, th:hover{
+tbody tr:nth-child(odd){
     background-color: antiquewhite;
+}
+tbody td:hover{
+    background-color: white;
 }
