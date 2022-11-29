@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a.amenu{
+    text-decoration: none;
+    color: crimson;
+    font-size: 1.2em;
+}
+header a img{
+    width: 80px;
+    padding-left: 15px;
+    text-align: center;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: bisque;
+    height: 50px;
+}
+header  a{
+    text-align: center;
+    padding-top: 5px;
+}
+header label{
+    text-align: center;
+    padding-top: 10px;
+
+}
+label imput{
+    
+}
+ul li{
+    list-style-type: none;
+    width: 100px;
+    background-color: aqua;
+    border: 1px solid crimson;
+    margin: 15px;
+    text-align: center;
+    border-radius: 30px;
+
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+ul li:hover{
+    background-color: beige;
+}
