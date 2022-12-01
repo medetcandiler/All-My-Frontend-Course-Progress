@@ -66,7 +66,7 @@ header h1.logo-main:hover{
     float: left;
     margin-right: 20px;
 } */
-section{
+/* section{
     box-sizing: border-box;
     border:1px solid crimson;
     width: 100%;
@@ -88,4 +88,66 @@ div{
 }
 div+p{
     margin:20px
+} */
+.container{
+    
+    height: 1000px;
+    background-color: wheat;
+    margin: 0px auto;
+    display: flex;
+    max-width:800px ;
+    justify-content: space-evenly;
+    
+}
+aside{
+    background-color: aqua;
+    padding:10px 5px 10px 5px;
+    width: 300px;
+    border-radius: 30px;
+
+}
+aside p,h{
+    margin: 10px;
+}
+h2.menu-bar, p.menu-bar{
+    
+    background-color: green;
+    padding: 5px;
+    margin:10px;
+    border-radius: 30px;
+    
+    
+}
+.menu-bar.relative{
+    position: relative;
+    top: 7px;
+    left: 30px;
+    background-color: blueviolet;
+}
+
+article.article-1{
+    background-color: orangered;
+    width: 400px;
+    height:300px;
+    text-align: left;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    margin-top:40px
+}
+article h1{
+    text-align: center;
+    color: brown;
+    font-weight: bold;
+    font-style: italic;
+}
+article h1,p{
+    padding: 20px 10px 10px 15px;
+}
+article.article-2{
+    background-color: crimson;
+    width: 400px;
+    height: 300px;
+    border-radius:30px;
+    
+    
 }
