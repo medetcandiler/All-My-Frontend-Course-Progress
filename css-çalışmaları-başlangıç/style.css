@@ -8,7 +8,7 @@ a{
     color: black;
     
 }
-li{
+/* li{
     list-style-type: none;
 }
 header{
@@ -49,4 +49,43 @@ header .logo-main{
 header h1.logo-main:hover{
     background-color: blueviolet;
     color: crimson;
+} */
+/* .bg-blue{
+    background-color: blue;
+    
+    
+    
+}
+.bg-red{
+    background-color: crimson;
+   
+}
+.box{
+    width: 300px;
+    height:300px;
+    float: left;
+    margin-right: 20px;
+} */
+section{
+    box-sizing: border-box;
+    border:1px solid crimson;
+    width: 100%;
+    float: left;
+}
+div{
+    width: 50px;
+    height:150px;
+    margin:20px;
+}
+.left{
+    background-color: aqua;
+    float: left;
+}
+.right{
+    background-color: black;
+    float:right;
+
+}
+div+p{
+    margin:20px
 }
