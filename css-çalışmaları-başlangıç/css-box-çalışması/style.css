@@ -1,4 +1,4 @@
-.left-bar{
+/* /* .left-bar{
     width: 200px;
     float:left;
 }
@@ -31,4 +31,78 @@
     
     background-color: aqua;
     
+}
+.kodluyoruz{
+    background: linear-gradient(135deg,rgba(112,73,186,0.6785938262939453),rgba(233,80,149,0.3910938262939453))!important;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.41);
+
+}
+.deneme{
+    text-decoration: none;
+    color:white;
+    background: linear-gradient(135deg,rgba(112,73,186,0.6785938262939453),rgba(233,80,149,0.3910938262939453))!important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.41);
+    box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.41);
+
+}    */
+
+/* <!-- DİSPLAY-ALİGN-İTEMS ÇALIŞMASI --> */
+
+/* 
+.parent{
+    background-color: aqua;
+    width: 300px;
+}
+.child-1{
+    position: relative;
+    top: 5px;
+    right: 0px;
+    background-color: bisque;
+    margin-left: 20px;
+}
+.child-2{
+    position: ;
+    background-color: crimson;
+    margin-left: 20px;
+}
+.child-3 {
+    background-color: green;
+    margin-left: 20px;
+} */
+
+
+.container{
+    width: 5000px    ;
+    height: 400px;
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: ;
+    align-items: center;
+
+   
+
+
+   
+    
+    
+    
+}
+.box{
+    background-color: antiquewhite;
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+
 }
