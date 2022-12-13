@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     background-color: fuchsia;
+    overflow: hidden;
 }
 ul{
     display: flex;
@@ -10,20 +11,24 @@ ul{
     align-items: center;
     text-decoration: none;
     list-style-type: none;
+    overflow: hidden;
 }
 li{
     margin: 0px 5px;
+    overflow: hidden;
 }
 ::placeholder{
     text-align: center;
     background-image: url(medium\ \(2\).png);
     background-repeat: no-repeat;
+    background-size: cover;
     
 }
 input{
     text-align: center;
 }
 .container{
+    overflow: hidden;
     
     height: 900px;
     max-width: 66%;
@@ -52,6 +57,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
    
     /* grid-column-start:1 ;
     grid-column-end: 3; */
