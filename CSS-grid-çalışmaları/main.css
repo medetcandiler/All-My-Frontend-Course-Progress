@@ -17,12 +17,13 @@ body{
 }
 
 .nav-bar{
-    height: 3rem;
-    background-color: #f2f2f2f2;
-    text-align: center;
-    display: flex;
+    display: grid;
+    font-size: 1.6rem;
+    grid-template: 3rem /repeat(5, 7rem);
     align-items: center;
-    padding-left: 0.3rem;
+    padding-left: 2rem;
+    background-color: aqua;
+    text-align: center;
 }
 a{
     text-decoration: none;
