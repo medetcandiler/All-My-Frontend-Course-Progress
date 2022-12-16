@@ -10,6 +10,14 @@ console.log(
    "raw price:", price,"rateoftax:", tax,"amountoftax:", priceTax,"totalprice:", total   
 )
 
+
+let stringNumber = "11"
+console.log(stringNumber) // OUTPUT 11 (AMA BUNUNU RENGİ DİĞERLERİNDEN FARKLI ÇÜNKÜ RAKAMSAL VERİ DEĞİL METİNSEL VERİ OLARAK GİRİLDİ )
+let newNumber = Number(stringNumber) //Number komutundan sonra (stringNumber) imizi yazınca bu sefer consoledde outputumuz rakam oldu..
+console.log(newNumber)
+console.log("Number constractor icine bilgi gonderildi:" Number("111")) /* tırnak içinde metinsel şeyler yazdığımız için 111 i metin olarak algılıyor number ile o tırnak 
+işlevini bir nevi yıkıp number özelliği kazandırıryoruz. */
+
 //arttırma ve azaltma işlemleri  (bazen bir fiyatı, rakamı, artık ne ise arttırmak ya da azaltmak isteriz peki naısl ?? hadi öğrenelim)
 let counter = 320 
 counter = counter + 1 //değişken değiştirme yöntemiyle bunu yapabilriim ve console.log(counter) sonucum artık 320+1 den 321 olarak gözükecek.(uzun yöntem)
@@ -53,7 +61,12 @@ console.log(2 ** 4) //Output 16..
 console.log("Math floor:", Math.floor(1.7))  // buranın anlamı 1.7 yazdık ve math floor komutumuz 1 e yuvarladı 1.4 yazsamda 1 görecektim . 2.1 yazsam 2  4.4 yazsam 4 gibi...
 
 //yukari yuvarlama islemi -> Math.ceil;
-console.log("Math ceil:", Math.ceil(1.6))
+console.log("Math ceil:", Math.ceil(1.6)) // buranın anlamı ise yukarı yuvarlamak output 2 oldu. 2.4 olsa 3 olurdu 4.1 olsa 4 oldur vb...
+
+//yakina yuvarlama islemi -> Math.round 
+console.log("Math round:", Math.round(1.7)) // output 2 olacak çünkü yakın olan ,,,, 1.5i 2 ye yuvarlar.... 2.   2.1 > 2    4.3 > 4     5.7>6 vb ....,
+
+
 
 
 
