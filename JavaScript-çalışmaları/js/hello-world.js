@@ -5,4 +5,6 @@
 // console.log("Hello World!")
 
 // Uyarı Mesajı (Alert)
-// alert("Hello World!")
+// alert("Hello World!") 
+
+// print("hello World!")
