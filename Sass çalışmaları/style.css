@@ -1,0 +1,23 @@
+*{
+    font-family: 'Unbounded', cursive;
+}
+table, tr, th, td{
+    border: 1px solid #ff000f;
+}
+table{
+    margin:0px auto;
+    width: 50%;
+    text-align: center;
+}
+table thead{
+    background-color: antiquewhite;
+}
+table tbody{
+    background-color: #f2f2f2;
+}
+table tbody tr td:hover{
+    background-color: wheat;
+}
+table tbody tr:nth-child(odd){
+    color: #ff000f;
+}
