@@ -1,0 +1,42 @@
+/* html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+}
+*,
+*::after,
+*::before{
+    
+    font-size: 1.6rem;
+    padding: 0px;
+    margin: 0px;
+} */
+.article{
+    background-color: bisque;
+    margin: 0px auto;
+    margin: 0px auto;
+    text-align: center;
+}
+.article h1, p{
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.section{
+    background-color: black;
+    height: 10rem;
+    margin: 0px auto;
+    width: 66%;
+}
+@media screen and (max-width:600px) {
+    .section{
+        display: none;
+    }
+}
+@media screen and (max-width:600px) {
+    .article h1{
+        color: aqua;
+    }
+    .article{
+        background-color: #f2f2f2;
+    }
+}
