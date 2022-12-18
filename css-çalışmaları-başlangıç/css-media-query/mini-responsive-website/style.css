@@ -1,0 +1,76 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    font-size: 1.6rem;
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
+}
+#top{
+    background-color: yellow;
+    height: 10rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.header{
+    background-color: aquamarine;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+.navbar a{
+    text-decoration: none;
+    color: antiquewhite;
+    text-align: center;
+    padding: 20px;
+}
+.navbar{
+    background-color: black;
+    height: 5rem;
+    display: flex;
+}
+.navbar a:hover{
+    background-color: aliceblue;
+}
+.container{
+    display: flex;
+}
+
+.aside{
+    flex: 30%;
+    padding: 2rem;
+}
+
+.section{
+    padding: 2rem;
+    flex: 70%;
+
+}
+.footer{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
+
+@media screen and (max-width:600px) {
+    .navbar, .container{
+        flex-direction: column;
+        
+    }
+}
