@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box;
+    font-size:62.5%;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    font-size: 1.6rem;
+}
+.column{
+    float: left;
+    width: 20%;
+    height: 20rem;
+    overflow: hidden;
+    min-width: 10%;
+}
+.column h1, p{
+    padding: 10px;
+}
+.row{
+    display: table ;
+    clear:both;
+    margin: 0px auto;
+}
+@media screen and (max-width:900px) {
+    .column{
+    width: 50%;
+    }
+}
+@media screen and (max-width:600px) {
+    .column{
+        width: 100%;
+    }
+}
