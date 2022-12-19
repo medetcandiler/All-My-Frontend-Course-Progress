@@ -15,8 +15,8 @@ let stringNumber = "11"
 console.log(stringNumber) // OUTPUT 11 (AMA BUNUNU RENGİ DİĞERLERİNDEN FARKLI ÇÜNKÜ RAKAMSAL VERİ DEĞİL METİNSEL VERİ OLARAK GİRİLDİ )
 let newNumber = Number(stringNumber) //Number komutundan sonra (stringNumber) imizi yazınca bu sefer consoledde outputumuz rakam oldu..
 console.log(newNumber)
-console.log("Number constractor icine bilgi gonderildi:" Number("111")) /* tırnak içinde metinsel şeyler yazdığımız için 111 i metin olarak algılıyor number ile o tırnak 
-işlevini bir nevi yıkıp number özelliği kazandırıryoruz. */
+// /* tırnak içinde metinsel şeyler yazdığımız için 111 i metin olarak algılıyor number ile o tırnak 
+//
 
 //arttırma ve azaltma işlemleri  (bazen bir fiyatı, rakamı, artık ne ise arttırmak ya da azaltmak isteriz peki naısl ?? hadi öğrenelim)
 let counter = 320 
