@@ -80,5 +80,34 @@ console.log(number3,typeof(number3))
 //OUTPUT: 1234 string   ,,bu sefer string yapıya dönüştü
 
 let test10=123
-test10+=""
+test10+=""  // test10 u stringe çevirdim 
 console.log(test10, typeof(test10))
+
+//**********  practicess
+console.log("foo"+ +"bar")
+let deneme2="medet"
+console.log(deneme2, typeof(deneme2))
+deneme2++
+console.log(deneme2)
+
+
+console.log("true"== true)
+console.log(null=="")
+console.log(typeof(""))
+console.log(typeof(null))
+
+
+console.log(Boolean(0))
+
+console.log(0 || "0" && {})
+console.log(["a"]>null)
+
+
+console.log("true"== true)
+
+console.log(null=="")
+
+
+
+
+
