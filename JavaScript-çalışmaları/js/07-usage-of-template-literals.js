@@ -67,16 +67,16 @@ document.body.innerHTML=PERSON
 
 //Alıştırma>aşağıdaki kod satırlarını Template Strings yazımına göre düzenleyiniz...
 const KİTAP={
-    adı:"fırtına",
+    adi:"fırtına",
     yazar: "shakspeare",
     tarih: "1610"
 }
 const bookTable=`
-<table>
+<table border>
     <tbody>
         <tr>
             <td> kitap </td>
-            <td> ${KİTAP.adı} </td>
+            <td> ${KİTAP.adi} </td>
         </tr>
         <tr>
             <td> yazar </td>
@@ -91,3 +91,47 @@ const bookTable=`
 `
 
 document.body.innerHTML=bookTable
+
+let isim1="medet"
+let soyad2="diler"
+let yas1=12
+
+let body=`
+isim: ${isim1} <br>
+soyisim: ${soyad2} <br>
+yas: ${yas1}
+`
+document.body.innerHTML=body
+
+
+
+
+let a="lorem"
+let b=32.4
+const DOMAİNS="kodluyoruz.org"
+
+let infos=`
+üstüme iyilik: ${a}
+sağlık a dostlar: ${parseInt(b)}
+uzantı mailin: ${DOMAİNS}
+timeoftheday: ${new Date().getHours()}.`
+
+console.log(infos)
+document.body.innerHTML=infos
+
+let table2=` 
+<table border>
+    <thead>
+        <tr>
+            <th>fiyat</th>
+            <th>dana</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>${a}</td>
+            <td>${b}</td>
+        </tr>
+    </tbody>
+</table>`
+document.body.innerHTML=table2
