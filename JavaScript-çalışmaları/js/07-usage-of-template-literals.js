@@ -37,3 +37,30 @@ time of the day:${new Date().getHours()}.
 `
 
 console.log(info2)
+
+
+let oldString="en sevdiğim yemek:\nkebapn\nlahmacun"
+console.log(oldString)
+
+let newString=`
+en sevdiğim yemek:
+kebap
+lahmacun`
+console.log(newString)
+
+let isim="medetcan"
+let soyad="diler"
+console.log(`benim adım:${isim} ${soyad}`)
+
+let ad="meddo"
+let department="engineering field"
+let eyeColor="brown"
+const YAS="26"
+
+const PERSON=`
+<p>${ad}</>
+<p>${department}</>
+<p>${eyeColor}</>
+<p>${YAS}</>
+`
+document.body.innerHTML=PERSON
