@@ -62,5 +62,32 @@ const PERSON=`
 <p>${department}</>
 <p>${eyeColor}</>
 <p>${YAS}</>
-`
+`;
 document.body.innerHTML=PERSON
+
+//Alıştırma>aşağıdaki kod satırlarını Template Strings yazımına göre düzenleyiniz...
+const KİTAP={
+    adı:"fırtına",
+    yazar: "shakspeare",
+    tarih: "1610"
+}
+const bookTable=`
+<table>
+    <tbody>
+        <tr>
+            <td> kitap </td>
+            <td> ${KİTAP.adı} </td>
+        </tr>
+        <tr>
+            <td> yazar </td>
+            <td> ${KİTAP.yazar} </td>
+        </tr>
+        <tr>
+            <td> tarih </td>
+            <td> ${KİTAP.tarih} </td>
+        </tr>
+    </tbody>
+</table>
+`
+
+document.body.innerHTML=bookTable
