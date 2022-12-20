@@ -108,6 +108,61 @@ console.log("true"== true)
 console.log(null=="")
 
 
+// number to string conversion practice
+let adana=123  // impilicit string döünüşüm
+x+=""
+console.log("tipi:",x,typeof(x))
+
+let mersin=1234 // explicit string dönüşüm
+mersin=mersin.toString()
+console.log(mersin, typeof(mersin))
+
+mersin=34.5
+console.log(mersin,typeof(mersin))
+mersin=String(34.5)
+console.log(mersin,typeof(mersin))
+
+// string to number conversion practice
+let medetdiler="27yasinda"
+medetdiler=parseInt(medetdiler)
+console.log(medetdiler,typeof(medetdiler))
+
+let diler="34.5px"
+console.log(parseInt(diler),typeof(diler))  //çevirmedi eşitlemedim
+// typeof unun number olması için aşağıdaki adım eksik
+diler=parseInt(diler)
+console.log("diler: ",diler,typeof(diler)) // OUTPUT: diler: 34 number
+
+let deger='44.5denizli'
+deger=parseFloat(deger)
+console.log(deger,typeof(deger)) 
+
+// Sembollerde dönüşüm sadece expilicit olarak yapılır....
+
+
+// Boolean conversion practice.
+let ses=2 //expilicit conversion
+ses=Boolean(ses)
+console.log(ses,typeof(ses)) //output: true boolean
+
+let abc="tusthy"
+abc=!! abc  //!! sembol true sonuç verdi birde aşağıda ! bakalım
+console.log(abc, typeof(abc)) //output: true boolean
+
+let b="akdeniz"
+b=!b
+console.log(b, typeof(b)) //output: false boolean  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
