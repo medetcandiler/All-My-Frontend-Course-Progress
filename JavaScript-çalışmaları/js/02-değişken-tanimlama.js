@@ -8,7 +8,7 @@ console.log(serverName)
 // VAR DEĞİŞKEN TANIMLAMA YÖNTEMİ ARTIK YENİ MODERN YAPIYLA BİRLİKTE KULLANILMAMAYA BAŞLANDI ONUN YERİNE LET ve Const kullanıyoruz.
 
 // let ile değişkeni boş tanımlamak:
-let serverName;
+// let serverName=123
 console.log(serverName)
 // üst aşamada değişkenim atalı olmadığı için boş görünecek
 
@@ -50,7 +50,25 @@ console.log(fullName) // OUTPUT> sifirlandi ve yeni bilgi eklendi
 //const SERVER_PASSWORD; // sadece degisken tanimlandı ve için boş bakalım çalışacak mı?? Hayııır hata verdi cont init olamamış. Aslında consta değişken tanımlarken bilgiyide ekliyor olmalıymışım.
 const SERVER_PASSWORD = "alsf232134dsf"
 console.log(SERVER_PASSWORD) //evet aynen bu şekilde kullanmalıyım bu sefer hiç sorunsuz console'a passwordumuzu gönderdik
-SERVER_PASSWORD = "1234" /*  server_password değişkenimizin değerini '1234' ile değiştirdik bakalım lette olduğu
+//SERVER_PASSWORD = "1234" 
+/*  server_password değişkenimizin değerini '1234' ile değiştirdik bakalım lette olduğu
 gibi çalışacak mıı ?? Hayıır hata aldıık. Bu değiştirmeyi yapamıyoruz.Constla eğer bir değişken tanımlıyorsak bu birdaha değişmeyecek anlamına geliyor.
 Passwordlarımızı veya değişmesini istemediğimiz değişkenlerimizi bu komut ile yazmalıyız */
 console.log(SERVER_PASSWORD) //bir şeyi değişmeyeceksek constla tanımlamayalız. örnegin tc kmlk nuamrası, passlar vb...
+
+
+
+let denemeName="medetdiler@hotmail.com"
+console.log(denemeName, typeof(denemeName))
+
+denemeName= denemeName+" email"
+console.log(denemeName)
+
+denemeName+=" email2"   //ekle ve eşitleyip direk yaz...use this short way rather than above method.
+console.log(denemeName)
+
+let myAge=26
+myAge=++myAge
+console.log(myAge)
+myAge-=2
+console.log(myAge)
