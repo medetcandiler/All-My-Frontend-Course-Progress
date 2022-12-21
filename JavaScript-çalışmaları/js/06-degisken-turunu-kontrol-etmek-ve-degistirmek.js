@@ -1,8 +1,9 @@
 Number.isNaN(123)
+
 let x=5;
 console.log(x)
 
-Number.isInteger(0)
+console.log(Boolean(Number.isInteger(0))) // true 
 
 //veri turunu ogrenmek typeof
 let price=123
@@ -29,6 +30,8 @@ console.log(parseInt(test1)) // output 1234 (ama sayı gibi gözüküyor)
 //yukarıdakinin typepof u hala string çünkü eşitleme yapmadım 
 test1=parseInt(test1)
 console.log(test1, typeof(test1))  //artık typeof umuzda number oldu
+
+
 
 
 let test2="12.3"
@@ -153,6 +156,38 @@ let b="akdeniz"
 b=!b
 console.log(b, typeof(b)) //output: false boolean  
 
+
+
+// tekrar
+
+let as="13.55px"
+as=as+parseInt(as)  // if you forger this step you typeof won't turn number
+console.log(parseInt(as),typeof(as)) // still string because some missing method you did
+
+
+// number to string
+let ab=1334
+String(ab)
+console.log(ab,typeof(ab))
+
+let cb=1234
+cb=String(cb)
+console.log(cb,typeof(cb))
+ 
+
+
+let cc=123451
+
+
+cc+=""   // impilicit conversion
+console.log(cc, typeof(cc))
+
+let dd="ankara"
+dd=!!+dd   // !--> true   !!--> false getirir ve işaretler boolean yapar.
+console.log(Boolean(dd),typeof(dd))
+
+let asd=!!0
+console.log(asd)
 
 
 

@@ -92,3 +92,13 @@ console.log(mail.slice(1))
 
 let deneme2="medetcan"
 console.log(deneme2.slice(2))
+
+
+
+//tekrar 
+
+let abcd="medetcandiler@gmail.com"
+console.log(abcd.slice(14,19))
+
+console.log(abcd.indexOf("@"))
+

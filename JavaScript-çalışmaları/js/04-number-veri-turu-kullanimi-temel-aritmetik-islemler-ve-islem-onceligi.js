@@ -109,3 +109,13 @@ console.log(b," türü ",typeof(b))
 
 
 console.log(Math.round(14.3))
+
+
+// let res=""
+// res+= Number.isNaN(13*5)+" true (13*5)<br>" 
+// res+=Number.isNaN(Infinity)+ "false (infinity)"
+// document.body.innerHTML=res
+
+let a=11 / "123123"
+console.log(Boolean(a))
+
