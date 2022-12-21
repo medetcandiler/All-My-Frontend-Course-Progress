@@ -44,9 +44,9 @@ console.log( (3 + 2) * 10) //bu bize 50 verir
 //mod(kalan) alma %(mod sembolü)
 //sayi tek mi çift mi ?????
 console.log( 3 % 2 ) // consoleda kalanı 1 diye gösterdi
-console( 15 % 2 ) // consolda kalanı 1 diye gösterdi
-console( 14 % 2 ) // consolda kalanı 0 olarak gösterdi.. YANİ BU ŞEKİLDE SAYI TEK Mİ ÇİFTMİYİ ANLAYABİLİRİZ. OUTPUT "0" ise Çift OUTPUT "1" ise Tek diyebilriz.
-console( 17 % 2 ) // kalan 1
+console.log( 15 % 2 ) // consolda kalanı 1 diye gösterdi
+console.log( 14 % 2 ) // consolda kalanı 0 olarak gösterdi.. YANİ BU ŞEKİLDE SAYI TEK Mİ ÇİFTMİYİ ANLAYABİLİRİZ. OUTPUT "0" ise Çift OUTPUT "1" ise Tek diyebilriz.
+console.log( 17 % 2 ) // kalan 1
 
 //8 urun alan koliye tum urunler sigiyor mu?
 console.log("Koli Örnegi", 8 % 8) // OUTPUT Koli örneği: 0  (8 ürünüm var 8 koliye koyunca kalan 0 gibi..)
@@ -70,3 +70,42 @@ console.log("Math round:", Math.round(1.7)) // output 2 olacak çünkü yakın o
 
 
 
+//tekrar
+let price1=1000
+let rateTax=.18
+let amountTax=price*rateTax
+let totalPrice1=price1+amountTax
+console.log(`fiyat bilgisi:${price1}
+vergi oranı:${rateTax}
+ödenecek vergi tutarı: ${amountTax}
+ödenecek total tutar: ${totalPrice1}
+`)
+
+
+let x="11"
+console.log(x)
+let y=Number(x)
+console.log(y)
+
+
+x=x+` burada istediğimiz gibi takılabiliriz ${price},
+kimse karışamaz ki`
+console.log(x)
+
+let say="25.2 product"
+say=parseInt(say)
+console.log(say)
+say%=3
+console.log(say)
+
+let b=10
+b**=3
+console.log(b,typeof(b))
+
+b="deneme"
+console.log(b," türü ",typeof(b))
+
+
+
+
+console.log(Math.round(14.3))
