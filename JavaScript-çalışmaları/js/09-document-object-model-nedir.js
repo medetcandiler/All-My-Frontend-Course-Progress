@@ -12,14 +12,20 @@ console.log(document.URL)
 console.log(document.baseURI)
 
 document.body.style.backgroundColor="red"
-document.body.style.backgroundColor="aqua" 
+document.body.style.backgroundColor="crimson" 
 
 console.log(document.URL) // url bilgisi alındı
 
 //there is no way to memorize all these codes whenever you need to change sth on DOM go to google and search what you want to change
 //example search javascript change document style and you can see how you change
 
-document.getElementsByClassName("deneme").style.color="red"
+document.getElementById('deneme').style.color='brown'
+document.getElementById('button').style.backgroundColor="#c3c3c3"
+document.getElementById('button').style.marginBottom="3rem"
+
+
+console.log(document.ATTRIBUTE_NODE)
+
 
 
   
