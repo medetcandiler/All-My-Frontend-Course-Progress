@@ -35,7 +35,7 @@
 //     document
 // }
 
-let a="medet"
+leta="medet"
 let b="diler"
 let c="gmail.com"
 console.log(a.concat(b+c))
