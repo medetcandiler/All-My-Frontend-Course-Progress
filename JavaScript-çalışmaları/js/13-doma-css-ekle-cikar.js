@@ -9,5 +9,28 @@ console.log(greeting) // console yazdıırıp kontrol ettik ve eklendiğini gör
 
 //peki içerisinden nasıl class sileceğiiz hadi öğrenelim ..
 
-console.log(greeting.classList.remove("third-class"))
+console.log(greeting.classList.remove("third-class")) // third classı sildim..
 
+//eğer remova yaparken classı yanlış yazarsak sadece silmez hata vermez !!!!!!
+
+//mesela kullanıcı tıkladığında class ekliceğiz yada removelayacağız gibi fonksiyonlarla çalışacağız
+
+
+let midChild=document.querySelector("#list>li:nth-child(5)")
+console.log(midChild.innerHTML)
+midChild.innerHTML="deneme"
+
+midChild.classList.add("txt-color","fs-xl")
+midChild.classList.remove("txt-color")
+
+
+//todolist tekrar
+// let reachOl=document.querySelector("#list>li")
+
+// function myFunction(){
+//     let reachTxt=document.querySelector("#input")
+//     let newLi=document.createElement("li")
+//     newLi.textContent=reachTxt.value
+//     reachOl.append(newLi)
+//     reachTxt.value=""
+// }

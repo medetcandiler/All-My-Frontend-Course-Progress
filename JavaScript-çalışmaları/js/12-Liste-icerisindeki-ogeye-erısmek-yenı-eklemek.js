@@ -58,17 +58,21 @@
 //     newLi.textContent=input.value
 //     liste.appendChild(newLi)}
 
-let liste=document.querySelector("#list")
+// let liste=document.querySelector("#list")
 
-let clickThat=document.querySelector("#btn").addEventListener("click", deneme)
-function deneme(){
-    let input=document.querySelector("#input")
-    let newLi=document.createElement("li")
-    newLi.textContent=input.value
-    liste.append(newLi)
-    input.value=""
+// let clickThat=document.querySelector("#btn").addEventListener("click", deneme)
+// function deneme(){
+//     let input=document.querySelector("#input")
+//     let newLi=document.createElement("li")
+//     newLi.textContent=input.value
+//     liste.append(newLi)
+//     input.value=""
 
 
-}
+// }
+
+let firstChild=document.querySelector("#list>li")
+console.log(firstChild.innerHTML+=" eklendi")
+
 
 
