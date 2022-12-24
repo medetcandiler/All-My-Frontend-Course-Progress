@@ -2,8 +2,6 @@
 // console.log(lastChild.innerHTML)
 
 // lastChild.classList.add("deneme") // class ekledim 
-// console.log(lastChild)
-
 // lastChild.innerHTML+=("eklendi1")
 
 // let firstChild=document.querySelector("#list>li:first-child") //first-child eklemen gerekli değil zaten ilkini seçer
