@@ -61,7 +61,23 @@ console.log(user=="guest") // true
 
 
 //practice 
-console.log(!!2) 
-console.log(!!"deneme")
-console.log(!2)
-console.log(!"deneme")
+console.log(!!2) //true
+console.log(!!"deneme") //true
+console.log(!2)   //false 
+console.log(!"deneme")  //false 
+
+
+
+//check voters age 
+let btn=document.querySelector("#btn").addEventListener("click", myFnc)
+function myFnc(){
+    let voteable=document.querySelector("#demo")
+    let age=document.querySelector("#age").value
+    if (isNaN(age)){
+        voteable.innerHTML = " input not a number"
+    }
+    else {
+        voteable.innerHTML = (age >= 18) ? "enoug to":"young to"
+    }
+   
+}
