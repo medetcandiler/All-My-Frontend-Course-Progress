@@ -48,27 +48,45 @@ addClass.classList.replace("class-2", "newclass-2")*/
 // function myFnc(){
 //     deneme.classList.toggle("txt-color")}
 
-let myName=document.querySelector("#my-name")
+// let myName=document.querySelector("#my-name")
 
 
-let addBtn=document.querySelector("#btn").addEventListener("click", addClass)
-function addClass(){
-    myName.classList.add("bg-orange")
-}
-let removeBtn=document.querySelector("#btn-2").addEventListener("click", removeClass)
-function removeClass(){
-    myName.classList.remove("bg-orange", "txt-transform")
+// let addBtn=document.querySelector("#btn").addEventListener("click", addClass)
+// function addClass(){
+//     myName.classList.add("bg-orange")
+// }
+// let removeBtn=document.querySelector("#btn-2").addEventListener("click", removeClass)
+// function removeClass(){
+//     myName.classList.remove("bg-orange", "txt-transform")
+// }
+
+// function replaceClass(){
+//     myName.classList.replace("bg-orange", "txt-transform")
+// }
+
+// function itemFnc(){
+//     let firstItem=document.querySelector("#info")
+//     let x=firstItem.classList.item(0)
+//     alert(x)
+// }
+
+
+
+
+let btn=document.querySelector(".btn").addEventListener("click",x)
+function x(){
+    let a=document.querySelector("#medo")
+    a.classList.toggle("bg-orange")
 }
 
-function replaceClass(){
-    myName.classList.replace("bg-orange", "txt-transform")
-}
 
-function itemFnc(){
-    let firstItem=document.querySelector("#info")
-    let x=firstItem.classList.item(0)
-    alert(x)
-}
+
+
+
+
+
+
+
 
 
 

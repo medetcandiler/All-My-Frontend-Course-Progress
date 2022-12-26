@@ -69,15 +69,33 @@ console.log(!"deneme")  //false
 
 
 //check voters age 
-let btn=document.querySelector("#btn").addEventListener("click", myFnc)
+
+// let btn=document.querySelector("#btn").addEventListener("click", myFnc)
+// function myFnc(){
+//     let voteable;
+//     let age=Number(document.querySelector("#age").value)
+//     if (isNaN(age)){
+//         voteable.innerHTML = " input not a number"
+//     }
+//     else {
+//         voteable.innerHTML = (age >= 18) ? "enoug to":"young to"
+//     }
+//     document.querySelector("#demo").innerHTML=voteable
+// }
+
+
 function myFnc(){
     let voteable=document.querySelector("#demo")
     let age=document.querySelector("#age").value
     if (isNaN(age)){
-        voteable.innerHTML = " input not a number"
+        voteable.innerHTML= "rakam yaz"
     }
     else {
-        voteable.innerHTML = (age >= 18) ? "enoug to":"young to"
+        voteable.innerHTML = (age < 18 ) ? "too young" : " too old"
     }
-   
+    
+    
+
+
 }
+
