@@ -17,8 +17,9 @@ div::after{
     content: "AFTER";
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 100%;
     color: black;
+    border-radius: 25%;
     background-color: bisque;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
 }
