@@ -61,37 +61,96 @@ if (x>y){
 else console.log(`${x} sayisi ${y} sayisindan küçüktür`)*/
 
 
-let note=document.querySelector("#name")
+// let note=document.querySelector("#name")
 
-let vize="80"
-let final="60"
-let dönemSonu= (vize*0.3 + final*0.7) 
-console.log(dönemSonu)
-if (dönemSonu <= 30){
-    note.innerHTML= dönemSonu + " ff - kaldi"
-}
-else if(dönemSonu >= 31 && dönemSonu <= 49 ) {
-    note.innerHTML= dönemSonu + " dc - sorumlu gecti"
-}
-else if(dönemSonu >= 50 && dönemSonu <=74){
-    note.innerHTML=dönemSonu + " cc - geçti"
-} 
-else if(dönemSonu >=75 && dönemSonu >=100){
-    note.innerHTML=dönemSonu + " aa - başarıyla geçti"
-}
+// let vize="80"
+// let final="60"
+// let dönemSonu= (vize*0.3 + final*0.7) 
+// console.log(dönemSonu)
+// if (dönemSonu <= 30){
+//     note.innerHTML= dönemSonu + " ff - kaldi"
+// }
+// else if(dönemSonu >= 31 && dönemSonu <= 49 ) {
+//     note.innerHTML= dönemSonu + " dc - sorumlu gecti"
+// }
+// else if(dönemSonu >= 50 && dönemSonu <=74){
+//     note.innerHTML=dönemSonu + " cc - geçti"
+// } 
+// else if(dönemSonu >=75 && dönemSonu >=100){
+//     note.innerHTML=dönemSonu + " aa - başarıyla geçti"
+// }
 
 
-let randomNumber= Math.floor(Math.random()*10)
-console.log(randomNumber)
-let clickBtn=document.querySelector("#btn").addEventListener("click", fnc)
-function fnc(){
-    let myGues=document.querySelector("#input").value;
-    if ( myGues==randomNumber && myGues != null) alert("Congragulations your gues true")
-    else if( myGues == "") alert("please write something")
-    else if ( myGues !== randomNumber) alert("Your gues wrong number:"+ randomNumber +" Try again")
-}
+// let randomNumber= Math.floor(Math.random()*10)
+// console.log(randomNumber)
+// let clickBtn=document.querySelector("#btn").addEventListener("click", fnc)
+// function fnc(){
+//     let myGues=document.querySelector("#input").value;
+//     if ( myGues==randomNumber && myGues != null) alert("Congragulations your gues true")
+//     else if( myGues == "") alert("please write something")
+//     else if ( myGues !== randomNumber) alert("Your gues wrong number:"+ randomNumber +" Try again")
+// }
 
 // if (myGues === randomNumber && myGues != null ) alert("bildin");
 // else if( myGues == "") alert("boş girdiniz")
 // else if ( myGues == null ) alert("vazgeçtiniz")
 // else if ( myGues !== randomNumber) alert("yankış bildiniz tekrar deneyin" + randomNumber)
+
+
+// //Kod satırını buraya ekleyiniz.
+// let weight=prompt("Kütlenizi giriniz","75 ")
+// let height=prompt("Boyunuzu giriniz","1.72")
+
+// let vki= weight / (height ** 2)
+
+
+// if (vki<18.5) alert(`Vücut kitle indexiniz: ${vki}değerleriniz düşüktür` )
+// else if (vki>= 18.5 && vki<=24.9) alert(`Vücut kitle indexiniz: ${vki} normal değerdesiniz`)
+// else if ( vki >= 25 && vki <= 29.9) alert(`Vücut kitle indexiniz: ${vki} kilolusunuz`)
+// else if ( vki >=30) alert(`Vücut kitle indexiniz: ${vki} aşırı kilolusunuz`)
+
+
+
+//Kod satırını buraya ekleyiniz.
+
+
+
+// function vkiHesapla(boy, kilo) {
+//     let vki= kilo / (boy * boy)
+//     if(vki<18.5) return alert(`Vücut kitle indeksiniz: ${vki}, değerleriniz düşüktür`);
+//     if(vki>= 18.5 && vki <= 24.9) return alert(`Vücut kitle indeksiniz: ${vki}, normal değerdesiniz`);
+//     if(vki>= 25.0 && vki <= 29.9) return alert(`Vücut kitle indeksiniz: ${vki}, kilolusunuz`);
+//     if(vki>= 30) return alert(`Vücut kitle indeksiniz: ${vki}, aşırı kilolusunuz`);
+// }
+
+// vkiHesapla(1.78,75) 
+
+function getIdWriteInfo(id, info){
+    let domObject=document.querySelector(`#${id}`)
+    domObject.innerHTML= info
+}
+
+function myFcn(userName, lastName){
+    let info= ` My name is ${userName} and surname is ${lastName}`
+    return info
+}
+let denemek1=myFcn("denek", "ki")
+
+let myAge="28 yaşında bir gencim"
+let myProfession=`<strong style="background-color:red;">I'm a mechanical engineer</strong>`
+getIdWriteInfo("deneme", denemek1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
