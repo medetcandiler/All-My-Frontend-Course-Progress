@@ -81,15 +81,9 @@ else console.log(`${x} sayisi ${y} sayisindan küçüktür`)*/
 // }
 
 
-// let randomNumber= Math.floor(Math.random()*10)
-// console.log(randomNumber)
-// let clickBtn=document.querySelector("#btn").addEventListener("click", fnc)
-// function fnc(){
-//     let myGues=document.querySelector("#input").value;
-//     if ( myGues==randomNumber && myGues != null) alert("Congragulations your gues true")
-//     else if( myGues == "") alert("please write something")
-//     else if ( myGues !== randomNumber) alert("Your gues wrong number:"+ randomNumber +" Try again")
-// }
+
+
+
 
 // if (myGues === randomNumber && myGues != null ) alert("bildin");
 // else if( myGues == "") alert("boş girdiniz")
@@ -125,35 +119,101 @@ else console.log(`${x} sayisi ${y} sayisindan küçüktür`)*/
 
 // vkiHesapla(1.78,75) 
 
-function getIdWriteInfo(id, info){
-    let domObject=document.querySelector(`#${id}`)
-    domObject.innerHTML= info
-}
+// function getIdWriteInfo(id, info){
+//     let domObject=document.querySelector(`#${id}`)
+//     domObject.innerHTML= info
+// }
 
-function myFcn(userName, lastName){
-    let info= ` My name is ${userName} and surname is ${lastName}`
-    return info
-}
-let denemek1=myFcn("medetcan", "diler")
+// function myFcn(userName, lastName){
+//     let info= ` My name is ${userName} and surname is ${lastName}`
+//     return info
+// }
+// let denemek1=myFcn("medetcan", "diler")
 
-let myAge="28 yaşında bir gencim"
-let myProfession=`<strong style="background-color:red;">I'm a mechanical engineer</strong>`
-getIdWriteInfo("deneme", denemek1)
+// let myAge="28 yaşında bir gencim"
+// let myProfession=`<strong style="background-color:red;">I'm a mechanical engineer</strong>`
+// getIdWriteInfo("deneme", denemek1)
 
-const createNumbeR= (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-console.log(createNumbeR(50,99))
+// const createNumbeR= (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+// console.log(createNumbeR(50,99))
 
 
-let weight=prompt("lütfen kilonuzu giriniz", "75")
-let height=prompt("Lütfen boyunuzu giriniz", "1.75")
-function vkiHesapla(weight, height){
-    let vki= weight / (height**2)
-    if (vki <=24 ) return document.querySelector("#deneme").innerHTML=` Çok zayıfsın ye az`;
-    if (vki >= 24 && vki<=29 ) return document.querySelector("#deneme").innerHTML=` ortalama aferin böyle devam `
-    if (vki >=30 && vki <=34 ) return document.querySelector("#deneme").innerHTML=` çüÜÜŞ KİLo ver be az `
-}
 
-vkiHesapla(weight, height)
+
+
+// function fnc(){
+//     let randomNumber= Math.floor(Math.random()*10)
+//     let myGues=document.querySelector("#input").value
+//     if (myGues == randomNumber) alert(`tebrikler bildiniz say: ${randomNumber}`);
+//     else if ( myGues !== randomNumber) alert(`Tekrar deneyiniz Sayı ${randomNumber} idi`);
+//     else if ( myGues == "") alert(`boş giriş yaptınız`)
+// }
+
+// let clickBtn=document.querySelector("#btn").addEventListener("click", fnc)
+// function fnc(){
+//     let randomNumber= Math.floor(Math.random()*10)
+//     let myGues=document.querySelector("#input").value;
+//     if ( myGues==randomNumber) alert("Congragulations your gues true")
+//     else if( myGues == "") alert("please write something")
+//     else if ( myGues !== randomNumber) alert("Your gues wrong number:"+ randomNumber +" Try again")
+// }
+
+
+// let vizeBtn=document.querySelector("#btn").addEventListener("click", vizeFnc)
+// function vizeFnc(){
+//     document.querySelector("#vize").value
+// }
+// let finalBtn=document.querySelector("#btn-2").addEventListener("click", finalFnc)
+// function finalFnc(){
+//     document.querySelector("#final").value
+// }
+
+
+// let ortalama= ( vizeBtn * 0.3) + ( finalBtn * 0.7)
+// if (isNaN(ortalama) ) document.querySelector("#deneme").innerHTML=` lütfen rakam olarak git `
+// else if ( ortalama <= 50 ) document.querySelector("#deneme").innerHTML= ` malesef sınıfta kaldın puan ortalaman ${ortalama}`
+// else if ( ortalama >50 && ortalama<=100 ) document.querySelector("#deneme").innerHTML=` Tebrikler başarıyla geçtin not ortalaman ise : ${ortalama}`
+
+
+// var ogrVizeNot = 45; // Bu kod satırını değiştiriniz. 
+// var ogrFinalNot = 60; // Bu kod satırını değiştiriniz. 
+
+// var ogrOrtalama = (ogrVizeNot * 0.3) + (ogrFinalNot * 0.7);
+
+// if(ogrOrtalama > 0 && ogrOrtalama < 30) {
+//   console.log("Not ortalamanız: " +ogrOrtalama + " KALDINIZ(FF).");
+// }
+
+// else if(ogrOrtalama > 31 && ogrOrtalama < 49) {
+//   console.log("Not ortalamnız: " +ogrOrtalama + " DC - KOŞULLU ");
+// }
+
+// else if(ogrOrtalama > 50 && ogrOrtalama < 84) {
+//   console.log("Not ortalamnız: " +ogrOrtalama + " CC - GEÇTİNİZ ");
+// }
+
+// else if(ogrOrtalama > 85 && ogrOrtalama <= 100) {
+//   console.log("Not ortalamnız: " +ogrOrtalama + " AA - GEÇTİNİZ ");
+// }
+
+
+ let userName=prompt("kullanici adinizi giriniz", "medetcan")
+ let age=prompt("yasiniz:")
+
+ if (!(isNaN(userName))) {
+    console.log("lütfen isnizi karakterlerle giriniz")
+ } 
+ else if ( isNaN(age)){
+    console.log("yaşınızı rakamlarla giriniz")
+ }
+ else if(userName && age >= 18 ) {
+    console.log("ehliyet alabilirsiniz")
+ }
+ else if (age < 18){
+    let necTime=( 18-age)
+    console.log(` ehliyet alamazsınız beklemeniz gereken sene : ${necTime}`)
+ }
+
 
 
 
