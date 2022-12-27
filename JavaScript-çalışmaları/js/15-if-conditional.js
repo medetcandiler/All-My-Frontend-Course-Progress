@@ -197,22 +197,130 @@ else console.log(`${x} sayisi ${y} sayisindan küçüktür`)*/
 // }
 
 
- let userName=prompt("kullanici adinizi giriniz", "medetcan")
- let age=prompt("yasiniz:")
+//  let userName=prompt("kullanici adinizi giriniz","medetcan")
+//  let age=prompt("yasiniz:")
+//  let info=document.querySelector("#deneme")
+//  if (!(isNaN(userName))) {
+//     info.innerHTML=("lütfen isnizi karakterlerle giriniz")
+//     info.style.color="red"
+//  } 
+//  if (!userName){
+//     info.innerHTML=("kullanıcı bulunamadı")
+//     info.style.color="red"
+//  }
+//  else if ( isNaN(age)){
+//     info.innerHTML=("yaşınızı rakamlarla giriniz")
+//     info.style.color="red"
+//  }
+//  else if(userName && age >= 18 ) {
+//     info.innerHTML=("ehliyet alabilirsiniz")
+//  }
+//  else if (age < 18){
+//     let necTime=( 18-age)
+//     info.innerHTML=` ehliyet alamazsınız beklemeniz gereken sene : ${necTime}`
+//     info.style.color="red"
+//  }
+// let days=new Date().getDay()
+// console.log(days,typeof(days))
+// let day;
+// switch(new Date().getDay()){
+//     case 0:
+//         day="sunday";
+//         break;
+//     case 1:
+//         day="monday"
+//         break;
+//     case 2:
+//         day="tuesday"
+//         break;
+//     case 3:
+//         day="wednesday"
+//         break;
+//     case 4:
+//         day="thursday"
+//         break;
+//     case 5:
+//         day="friday"
+//         break;
+//     case 6:
+//         day="saturday";
+// }
+// document.querySelector("#deneme").innerHTML="looking forward to weekend"
 
- if (!(isNaN(userName))) {
-    console.log("lütfen isnizi karakterlerle giriniz")
- } 
- else if ( isNaN(age)){
-    console.log("yaşınızı rakamlarla giriniz")
- }
- else if(userName && age >= 18 ) {
-    console.log("ehliyet alabilirsiniz")
- }
- else if (age < 18){
-    let necTime=( 18-age)
-    console.log(` ehliyet alamazsınız beklemeniz gereken sene : ${necTime}`)
- }
+
+
+// let dayss;
+
+// switch(new Date().getDay()){
+//     default:
+//         console.log(dayss="tuesday")
+// }
+
+
+
+// let weekend;
+// switch(new Date().getDay()){
+//     case 0:
+//         weekend="sunday"
+//         break;
+//     case 6:
+//         weekend="saturday"
+//         break;
+//     default:
+//         document.querySelector("#deneme").innerHTML="looking forward to weekend, today is " + dayss
+// }
+
+
+
+
+// let writeWeather=document.querySelector("#deneme")
+// let getInfo=prompt("hava durumunu yaz")
+// let weather=`${getInfo}`
+// switch(weather){
+//     case "yagmurlu":
+//         writeWeather.innerHTML="şemsiyesis çıkma"
+//         break;
+//     case "gunesli":
+//         writeWeather.innerHTML="hafif giyin"
+//         break;
+//     case "karli":
+//         writeWeather.innerHTML="kalin giyin donma"
+//         break;
+//     default:
+//         writeWeather.innerHTML="asdasd"
+// }
+
+
+let reachHtml=document.querySelector("#deneme")
+let islem = function(a, b, operator){
+    switch(operator){
+        case ( "topla" ):
+            return reachHtml.innerHTML=(a+b)
+            break;
+        case ( "cikar"):
+            return reachHtml.innerHTML=(a-b)
+            break;
+        case( "bol"):
+            return reachHtml.innerHTML=(a/b)
+            break;
+        case ( "carp"):
+            return reachHtml.innerHTML=( a*b)
+            break;
+        case("üssü"):
+            return reachHtml.innerHTML= ( Math.pow(a,b))
+            break;
+        case("sqrt" ):
+            return reachHtml.innerHTML=( Math.sqrt(a) );
+            break;
+        default:
+            return reachHtml.innerHTML="tanimlanmamış işlem girdiniz"
+    }
+}
+islem(100,20 ,"carp")
+
+
+
+
 
 
 
