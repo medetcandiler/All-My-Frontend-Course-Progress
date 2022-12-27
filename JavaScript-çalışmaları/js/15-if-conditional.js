@@ -134,11 +134,26 @@ function myFcn(userName, lastName){
     let info= ` My name is ${userName} and surname is ${lastName}`
     return info
 }
-let denemek1=myFcn("denek", "ki")
+let denemek1=myFcn("medetcan", "diler")
 
 let myAge="28 yaşında bir gencim"
 let myProfession=`<strong style="background-color:red;">I'm a mechanical engineer</strong>`
 getIdWriteInfo("deneme", denemek1)
+
+const createNumbeR= (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+console.log(createNumbeR(50,99))
+
+
+let weight=prompt("lütfen kilonuzu giriniz", "75")
+let height=prompt("Lütfen boyunuzu giriniz", "1.75")
+function vkiHesapla(weight, height){
+    let vki= weight / (height**2)
+    if (vki <=24 ) return document.querySelector("#deneme").innerHTML=` Çok zayıfsın ye az`;
+    if (vki >= 24 && vki<=29 ) return document.querySelector("#deneme").innerHTML=` ortalama aferin böyle devam `
+    if (vki >=30 && vki <=34 ) return document.querySelector("#deneme").innerHTML=` çüÜÜŞ KİLo ver be az `
+}
+
+vkiHesapla(weight, height)
 
 
 
