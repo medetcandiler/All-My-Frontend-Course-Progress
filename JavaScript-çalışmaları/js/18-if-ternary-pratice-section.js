@@ -12,33 +12,8 @@ const SAD=`
 </svg>
 `
 
-// let getVizeNote=prompt("Final Notunuzu Giriniz","örn: 70")
-// let getFinalNote=prompt("final notunu gir", "örn: 80")
-// let clickBtn=document.querySelector("#btn").addEventListener("click", myFunction)
-//     let input=document.querySelector("#input")
-    
-// function myFunction(){
 
-// let note=document.querySelector("#info")
-// note.innerHTML=input
 
-// if (input.value>=0 && input.value<=100  && input.value!="")
-//     switch(true){
-//         case(input.value>=50):
-//             note.classList.add("text-success")
-//             note.innerHTML=` ${SMİLE}  aa notunuz: ${input.value}`
-//             break;
-//         case(input.value<50):
-//             note.classList.add("text-danger")
-//             note.innerHTML= ` ${SAD} ff notunuz: ${input.value}`
-//             break;
-//     }
-// else {
-//     note.classList.remove("text-danger")
-//     note.classList.add("text-info")
-//     note.textContent="değer hatalı 0-100 arası sayı girmelisinz."
-// }
-// }    
 let clickBtn=document.querySelector("#btn").addEventListener("click", myFunction)
     
 
@@ -66,8 +41,9 @@ else {
 }
 }    
 
-
-
+/************************ */
+// let getVizeNote=prompt("Final Notunuzu Giriniz","örn: 70")
+// let getFinalNote=prompt("final notunu gir", "örn: 80")
 // let averageNote= getVizeNote*0.3 + getFinalNote*0.7
 // let x=Math.round(averageNote)
 // let info1=document.querySelector("#info")
@@ -111,6 +87,9 @@ else {
 //     info1.innerHTML="girdiğiniz bilgiler hatalıdır. Lütfen notlarınızı 0-100 arasında bir sayı olarak tekrar giriniz!"} 
 
 
+
+
+/*************************** */
 // let examGrade=prompt("puani gir")
 // let textInfo;
 // 
