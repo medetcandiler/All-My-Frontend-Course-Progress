@@ -73,7 +73,7 @@ console.log(!"deneme")  //false
 // let btn=document.querySelector("#btn").addEventListener("click", myFnc)
 // function myFnc(){
 //     let voteable;
-//     let age=Number(document.querySelector("#age").value)
+//     let age=Number(document.querySelector("#age").value
 //     if (isNaN(age)){
 //         voteable.innerHTML = " input not a number"
 //     }
