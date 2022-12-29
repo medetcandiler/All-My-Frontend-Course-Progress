@@ -240,14 +240,16 @@ function programDetayi(bootcamp, organizasyon){
     console.log("234" + tumProgram())
 }
 
-let sayacArtir= ()=> {
-    let sayac=0;
-    return function(){
-        return sayac++ ;
-    };
+let counter=()=> {
+    let sayac=0
+    return ()=>{
+        return sayac++;
+    }
 }
+let counter1=counter()
+console.log(counter1())
 
+setInterval(counter1,1000)
 
-console.log()
 
 
