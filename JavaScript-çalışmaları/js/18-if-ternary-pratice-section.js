@@ -26,12 +26,12 @@ if (ortalama>=0 && ortalama<=100  && ortalama!="")
         case(ortalama>=50):
             note.classList.remove("text-danger")
             note.classList.add("text-success")
-            note.innerHTML=` ${SMİLE}  aa notunuz: `
+            note.innerHTML=` ${SMİLE}  aa notunuz: ${ortalama}`
             break;
         case(ortalama<50):
             note.classList.remove("text-success")
             note.classList.add("text-danger")
-            note.innerHTML= ` ${SAD} ff notunuz: `
+            note.innerHTML= ` ${SAD} ff notunuz:${ortalama} `
             break;
     }
 else {
