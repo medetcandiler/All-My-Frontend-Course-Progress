@@ -220,3 +220,39 @@ domIdWrite("deneme", abc+addStyle)
 
 // Kaynaklar
 // https://www.w3schools.com/js/js_functions.asp */
+
+
+function factorial(n){
+    if( n<0 ){
+        return -1
+    }
+    else if ( n == 0){
+        return 1 
+    }
+    else {
+        return n * factorial(n-1)
+    }
+}
+
+function factorialSecond(n){
+    if( n == 0 || n == 1){
+        return 1
+    } 
+    else if( n<0){
+        return -1
+    }
+    for(let i= n-1; i>=1 ; i--){
+        n *= i;
+    }
+    return n
+}
+
+let x= factorialSecond(-3)
+console.log(x)
+
+function factorialize(n){
+    return n;
+}
+let xdn=factorialize
+console.log(xdn(9))
+
