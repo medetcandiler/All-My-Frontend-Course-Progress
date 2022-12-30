@@ -256,3 +256,11 @@ function factorialize(n){
 let xdn=factorialize
 console.log(xdn(9))
 
+let asd= 11+11+"11"
+console.log(asd)
+
+
+const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+
+let deneme= fruits.slice(2,4) 
+console.log(fruits)
