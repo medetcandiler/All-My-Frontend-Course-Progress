@@ -1,5 +1,4 @@
-const toggleBtn=document.querySelector("#btn").addEventListener("click", toggleFnc)
-function toggleFnc(){
-    document.querySelector('body').classList.toggle('dark')
+let reachBtn= document.querySelector("#btn").addEventListener("click", myToggle)
+function myToggle(){
+    document.querySelector("body").classList.toggle("dark")
 }
-
