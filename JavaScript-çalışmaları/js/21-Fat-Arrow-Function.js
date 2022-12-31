@@ -71,20 +71,29 @@ console.log(feedTheCat(""))
 
 
 /******** practice for fat arrow functions */
-let text="";
-const myFavoriteSeries= ["breaking bad", "prison break", "the ring of power", "sherlock holmes"];
-myFavoriteSeries.forEach(myFunction);
-document.querySelector("#deneme").innerHTML= text ;
+// let text="";
+// const myFavoriteSeries= ["breaking bad", "prison break", "the ring of power", "sherlock holmes"];
+// myFavoriteSeries.forEach(myFunction);
+// document.querySelector("#deneme").innerHTML= text ;
 
-function myFunction(item, index){
-    text += index + ": "+ item + "<br>";
+// function myFunction(item, index){
+//     text += index + ": "+ item + "<br>";
+// }
+
+
+// let sum=2;
+// let myNumbers=[44, 56, 65, 45, 23, 45]
+// myNumbers.forEach(addition)
+// let writeHtml=document.querySelector("#deneme").innerHTML= sum ;
+// function addition(item){
+//     sum+=` ,${item} ` 
+// }
+
+
+let denemek;
+let numbers=[2,3,4,5,6];
+let newArr=numbers.map(tenTimes)
+let writeNumbers=document.querySelector("#info").innerHTML= newArr
+function tenTimes(item){
+    return item * 10
 }
-
-
-let sum=2;
-let myNumbers=[44, 56, 65, 45, 23, 45]
-myNumbers.forEach(addition)
-let writeHtml=document.querySelector("#deneme").innerHTML= sum ;
-function addition(item){
-    sum+=` ,${item} ` 
-}ß
