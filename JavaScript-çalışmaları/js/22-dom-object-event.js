@@ -48,7 +48,33 @@
 //     console.log("deneme", )
 // })
 
-let otherNewEvent=document.querySelector("#info").addEventListener("copy", myCutFunction)
-function myCutFunction(deneme){
-    console.log("what the type of event : " , deneme.type )
-}
+// let otherNewEvent=document.querySelector("#info").addEventListener("copy", myCutFunction)
+// function myCutFunction(deneme){
+//     console.log("what the type of event : " , deneme.type )
+// }
+
+
+/************** form opt sample */
+// let changeColors=document.querySelector("#select").addEventListener("change", function(x){
+//     console.log("what we select : " + x.type)
+//     console.log("value of form:" + x.target.value)
+// }
+
+
+let reachMyForm=document.querySelector("#inputText");
+let submitButton=document.querySelector("#btn");
+let selectColor=document.querySelector("#selectColor");
+let getContainer=document.querySelector(".container");
+
+reachMyForm.addEventListener("click", function(){
+    console.log("form");
+})
+selectColor.addEventListener("click", function(){
+    console.log("select color box ")
+})
+getContainer.addEventListener("click", function(){
+    console.log("çerçeve")
+})
+
+
+

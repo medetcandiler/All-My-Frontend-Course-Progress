@@ -49,18 +49,26 @@
 
 
     <!-- sample of form -->
-    <form action="#">
-        <label for="colors">Choose color</label>
-        <select name="colors" id="select">
-            <option value="red">red</option>
-            <option value="blue">blue</option>
-            <option value="black">black</option>
-            <option value="purple">purple</option>
-        </select>
-        <br>
-        <input type="submit" name="check colors" id="submit">
-    </form>
     
+    <div class="container">
+        <p id="text">Submit form</p>
+        <form action="#"  id="inputText">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" value="medetcan"> <br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" value="diler" >
+        </form>
+        <button type="button" id="btn">Click on me!</button>
+        <br><br>
+        <form action="#" id="selectColor">
+            <label for="color">Choose Colors:</label>
+            <select name="color" id="color">
+                <option value="blue">blue</option>
+                <option value="red">red</option>
+                <option value="black">black</option>
+            </select>
+        </form>
+    </div>
 
     <script src="js/22-dom-object-event.js"></script>
     
