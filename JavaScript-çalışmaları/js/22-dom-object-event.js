@@ -61,20 +61,46 @@
 // }
 
 
-let reachMyForm=document.querySelector("#inputText");
-let submitButton=document.querySelector("#btn");
-let selectColor=document.querySelector("#selectColor");
-let getContainer=document.querySelector(".container");
+// let reachMyForm=document.querySelector("#inputText");
+// let submitButton=document.querySelector("#btn");
+// let selectColor=document.querySelector("#selectColor");
+// let getContainer=document.querySelector(".container");
 
-reachMyForm.addEventListener("click", function(){
-    console.log("form");
-})
-selectColor.addEventListener("click", function(){
-    console.log("select color box ")
-})
-getContainer.addEventListener("click", function(){
-    console.log("çerçeve")
-})
+// reachMyForm.addEventListener("click", function(){
+//     console.log("form");
+// })
+// selectColor.addEventListener("click", function(){
+//     console.log("select color box ")
+// })
+// getContainer.addEventListener("click", function(){
+//     console.log("çerçeve")
+// })
+
+
+// let input = document.getElementById('input');
+// let output = document.getElementById('output');
+
+// input.addEventListener('click', function(event) {
+// output.innerHTML = event.target.value.split('').join('');
+// console.log("kadfkasdf")
+// });
+
+
+
+const random= (number)=>{
+    return Math.floor(Math.random()*(number+1));
+}
+let button=document.querySelector("#btn")
+button.onclick=function(){
+    let colors= `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    document.body.style.backgroundColor= colors
+}
+
+button.removeEventListener("click", fnc)
+
+
+
+
 
 
 
