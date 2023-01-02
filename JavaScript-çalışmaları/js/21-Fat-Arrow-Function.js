@@ -81,13 +81,13 @@ console.log(feedTheCat(""))
 // }
 
 
-// let sum=2;
-// let myNumbers=[44, 56, 65, 45, 23, 45]
-// myNumbers.forEach(addition)
-// let writeHtml=document.querySelector("#deneme").innerHTML= sum ;
-// function addition(item){
-//     sum+=` ,${item} ` 
-// }
+let sum=2;
+let myNumbers=[44, 56, 65, 45, 23, 45]
+myNumbers.forEach(addition)
+let writeHtml=document.querySelector("#deneme").innerHTML= sum ;
+function addition(item){
+    sum+=` ,${item} ` 
+}
 
 
 let denemek;
