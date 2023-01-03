@@ -5,9 +5,9 @@
 // counterDOM.innerHTML=counter
 
 // increaseDOM.addEventListener("click", clickEvent)
-// // function clickEvent(){
-// //     console.log(this.id)
-// // }
+// function clickEvent(){
+//     console.log(this.id)
+// }
 
 // decreaseDOM.addEventListener("click", clickEvent)
 // function clickEvent(){
@@ -32,16 +32,16 @@
 
 
 ///*******Practice of changing background color, İf you click the change background color button the background color is going to be changed by you!! */
-function random(number){
-    return Math.floor(Math.random()*number+1)
-}
+// function random(number){
+//     return Math.floor(Math.random()*number+1)
+// }
 
-let button=document.querySelector("#btn-bg").addEventListener("click", changeColor)
-function changeColor(evt){
-    let myRgb=`rgb(${random(255)},${random(255)},${random(255)} )`
-    // document.body.style.backgroundColor= myRgb
-    evt.target.style.backgroundColor= myRgb
-}
+// let button=document.querySelector("#btn-bg").addEventListener("click", changeColor)
+// function changeColor(evt){
+//     let myRgb=`rgb(${random(255)},${random(255)},${random(255)} )`
+//     // document.body.style.backgroundColor= myRgb
+//     evt.target.style.backgroundColor= myRgb
+// }
 
 let counter=0
 let writeDOM=document.querySelector("#number")
@@ -53,14 +53,27 @@ decreaseBtn.addEventListener("click", myClickEvent)
 function myClickEvent(e){
     this.id=="decrease" ? counter-=1 : counter+=1;
     writeDOM.innerHTML= counter;
-    console.log(e)
+    
 }
 
-let myInput=document.querySelector("#myinput")
-myInput.addEventListener("keydown", (event)=>{
-    let reachP=document.querySelector(".lead")
-    reachP.innerHTML= `you type '${event.key}'`
+// let myInput=document.querySelector("#myinput")
+// myInput.addEventListener("keydown", (event)=>{
+//     let reachP=document.querySelector(".lead")
+//     reachP.innerHTML= `you type '${event.key}'`
+// })
+
+let reachTextArea=document.querySelector(".lead");
+let fnameInput=document.querySelector("#fname");
+let lnameInput=document.querySelector("#lname");
+let form=document.querySelector("form")
+
+form.addEventListener("submit", (evt)=>{
+    if ( fnameInput.value === '' || lnameInput.value=== ''){
+        evt.preventDefault();
+        reachTextArea.innerHTML="please fill the blanks"
+    }
 })
+
 
 
 
