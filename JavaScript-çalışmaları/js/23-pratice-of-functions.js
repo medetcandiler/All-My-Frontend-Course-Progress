@@ -37,9 +37,10 @@ function random(number){
 }
 
 let button=document.querySelector("#btn-bg").addEventListener("click", changeColor)
-function changeColor(){
+function changeColor(evt){
     let myRgb=`rgb(${random(255)},${random(255)},${random(255)} )`
-    document.body.style.backgroundColor= myRgb
+    // document.body.style.backgroundColor= myRgb
+    evt.target.style.backgroundColor= myRgb
 }
 
 let counter=0
@@ -49,10 +50,17 @@ let decreaseBtn=document.querySelector("#decrease");
 increaseBtn.addEventListener("click", myClickEvent)
 decreaseBtn.addEventListener("click", myClickEvent)
 
-function myClickEvent(){
+function myClickEvent(e){
     this.id=="decrease" ? counter-=1 : counter+=1;
-    writeDOM.innerHTML= counter
+    writeDOM.innerHTML= counter;
+    console.log(e)
 }
+
+let myInput=document.querySelector("#myinput")
+myInput.addEventListener("keydown", (event)=>{
+    let reachP=document.querySelector(".lead")
+    reachP.innerHTML= `you type '${event.key}'`
+})
 
 
 
