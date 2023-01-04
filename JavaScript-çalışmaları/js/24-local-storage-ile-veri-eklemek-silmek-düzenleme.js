@@ -15,6 +15,8 @@
 //     writeDOM.innerHTML=counter
 // }
 
+
+
 const form=document.querySelector("form");
 const ul=document.querySelector("ul");
 const button=document.querySelector("button");
@@ -38,8 +40,8 @@ form.addEventListener("submit", function(evt){
     input.value="";
 });
 
-data.forEach(element => {
-    liMaker(element)
+data.forEach(item => {
+    liMaker(item)
 })
 
 button.addEventListener("click", function(){
