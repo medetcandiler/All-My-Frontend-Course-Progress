@@ -29,35 +29,35 @@ let deneme= ()=> {
 }
 console.log(deneme())
 
-//to do list with local storage
-const myUl=document.querySelector('#myUl');
-const form=document.querySelector('form');
-const input=document.querySelector('input');
-const btn=document.querySelector('#btn');
-myUl.classList.add('decoration');
+//*************to do list with local storage
+// const myUl=document.querySelector('#myUl');
+// const form=document.querySelector('form');
+// const input=document.querySelector('input');
+// const btn=document.querySelector('#btn');
+// myUl.classList.add('decoration');
 
-const myArr= localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-localStorage.setItem('items', JSON.stringify(myArr))
-
-
-
-form.addEventListener('submit', toDoFnc);
-
-let liMaker=(text)=>{
-    let newLi=document.createElement('li');
-    newLi.textContent= text;
-    myUl.append(newLi);
-}
+// const myArr= localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+// localStorage.setItem('items', JSON.stringify(myArr))
 
 
-function toDoFnc(e){
-    e.preventDefault()
-    myArr.push(input.value);
-    localStorage.setItem('items', JSON.stringify(myArr));
-    liMaker(input.value);
-    input.value='';
-}
 
-btn.addEventListener('click', function(){
-    localStorage.clear()
-});
+// form.addEventListener('submit', toDoFnc);
+
+// let liMaker=(text)=>{
+//     let newLi=document.createElement('li');
+//     newLi.textContent= text;
+//     myUl.append(newLi);
+// }
+
+
+// function toDoFnc(e){
+//     e.preventDefault()
+//     myArr.push(input.value);
+//     localStorage.setItem('items', JSON.stringify(myArr));
+//     liMaker(input.value);
+//     input.value='';
+// }
+
+// btn.addEventListener('click', function(){
+//     localStorage.clear()
+// });
