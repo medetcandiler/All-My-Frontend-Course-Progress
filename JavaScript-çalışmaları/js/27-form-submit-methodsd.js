@@ -39,19 +39,64 @@
 //     input1.value=''
 // }
 
-let userName;
-let password;
-let infoDOM=document.querySelector('#info')
+// let userName;
+// let password;
+// let infoDOM=document.querySelector('#info')
 
-function handleSubmit(event){
-    event.preventDefault();
-    console.log(`username:${userName}-password:${password}`)
-}
-function handleChange(event){
-    if(event.target.name==='fname'){
-        userName=event.target.value
+// function handleSubmit(event){
+//     event.preventDefault();
+//     console.log(`username:${userName}-password:${password}`)
+// }
+// function handleChange(event){
+//     if(event.target.name==='fname'){
+//         userName=event.target.value
         
-    }else{
-        password=event.target.value
+//     }else{
+//         password=event.target.value
+//     }
+// }
+
+// let selectCar=document.querySelector('#mySelect')
+// selectCar.addEventListener('change', (e)=>{
+//     let infoDOM=document.querySelector('#myInfo')
+//     infoDOM.innerHTML=`You selected: ${e.target.value}`
+// })
+
+
+
+// function myFunction() {
+//   var x = document.getElementById("mySelect").value;
+//   document.getElementById("demo").innerHTML = "You selected: " + x;
+// }
+
+let form=document.querySelector('#form')
+let fnameDOM=document.querySelector('#fname')
+let lnameDOM=document.querySelector('#lname')
+let buttonDOM=document.querySelector('#btn')
+
+let username;
+let lastname;
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    console.log(`username:${username} - lastname:${lastname}`);
+    localStorage.setItem('userInfo', `${username},${lastname}`)
+
+})
+
+let resetButton=document.querySelector('#btnReset')
+resetButton.addEventListener('click', (event)=>{
+    localStorage.clear()
+    lnameDOM.value=''
+    fnameDOM.value=''
+})
+
+lnameDOM.addEventListener('change',mySubmit);
+fnameDOM.addEventListener('change',mySubmit);
+
+function mySubmit(e){
+    if(e.target.name === 'fname'){
+        username=e.target.value
+    } else {
+        lastname=e.target.value
     }
 }
