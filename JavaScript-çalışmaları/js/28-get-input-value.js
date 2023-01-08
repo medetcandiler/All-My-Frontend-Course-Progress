@@ -1,25 +1,42 @@
-let form=document.querySelector('#myform')
-let fnameDOM=document.querySelector('#fname')
-let ageDOM=document.querySelector('#age')
-let button=document.querySelector('#btn')
-let atDOM=document.querySelector('#email')
+let formDOM=document.querySelector('#form')
 
-form.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    submitOK='true'
-    if(fnameDOM.value.length > 15 ){
-        alert('the name may have no more than 10 characters')
-        submitOK='false'
-    }
-    if (isNaN(ageDOM.value) || ageDOM.value<1 || ageDOM.value>100){
-        alert('the age must be a number between 1 and 100')
-        submitOK='false'
-    }
-    if (atDOM.value.indexOf('@') == -1){
-        alert('no a walid email')
-        submitOK='false'
-    }
-    if (submitOK=='false'){
-        return false
+let username;
+let password;
+
+let forUserName=document.querySelector('#fusername')
+let forPassword=document.querySelector('#fpassword')
+let listDOM=document.querySelector('#userList')
+
+formDOM.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    switch(true){
+        case(!(isNaN(username))):
+            alert('please write your username by using characters')
+            break;
+        case(username===undefined):
+            alert('please do not keep empty username')
+        case(password===undefined):
+            alert('please write your password')
+            break;
+        default:
+            addItem()
     }
 })
+
+function addItem(){
+    let newLi= document.createElement('li')
+    newLi.innerHTML= `${username} ${password}`
+    newLi.classList.add('list-group-item','d-flex','justify-content-between','align-items-start')
+    listDOM.append(newLi)
+}
+
+
+function changeFnc(event){
+    if(event.target.id==='username' && username!==''){
+        username=event.target.value
+    }else if (event.target.id==='password' && password!==''){
+        password=event.target.value
+    }else{
+        alert('please do not keep empty input areas')
+    }
+}
