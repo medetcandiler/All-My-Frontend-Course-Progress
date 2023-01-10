@@ -116,4 +116,29 @@ console.log(months[Math.floor(months.length/2)])
 
 
 
+//RECAP WHAT I HAVE LEARNT 
+
+let myFavoriteAnimals=['butterfly', 'cat', 'dog', 'snake'];
+for (let i=0; i < myFavoriteAnimals.length ; i++){
+    document.querySelector('#info2').innerHTML += i+': '+myFavoriteAnimals[i]+'<br>';
+}
+
+let myFavCars=['bmw', 'mercedes', 'hyundayi',[2, 3, 4, 5], 'suzuki']
+console.log(myFavCars[3][2]) 
+
+let text2='';
+myFavoriteAnimals.forEach((item, index) => {
+    document.querySelector('#info').innerHTML+= index+ ': '+ item+'<br>'
+});
+
+console.log(myFavCars[Math.floor(myFavCars.length/2)])
+console.log(myFavCars[myFavCars.length-1])
+
+let compare=[]
+let compare2=compare
+console.log(compare == compare2)
+
+
+
+
 
