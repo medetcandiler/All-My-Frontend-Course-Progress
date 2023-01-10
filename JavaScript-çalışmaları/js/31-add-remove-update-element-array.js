@@ -42,3 +42,17 @@ console.log(items)
 // if we changed let say 10000 element of the array it creates empty elements
 items[10000]='10000element has changed'
 console.log(items) // you can see on the console it creates 9995 number of empty array element ///// be caraful while changing an element
+
+//splice() method hem ekler hem cikarir ilk parametresi indexi secer 2, parametresi ise kac elemanin cikarilacagini belirtir
+
+let fruits=['apple', 'mango', 'orange']
+fruits.splice(1,0, 'banana', 'kiwi') // 1. indexe 0 cikarmayla banana ve kiwi ekledik 
+console.log('fruits splice() method :' ,fruits)
+
+let favColors=['green', 'orange', 'yellow', 'black']
+favColors.splice(favColors.length-2,2)  // BASICLY (2,2) son iki elemani cikardim 
+console.log(favColors)
+
+fruits=["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2,1, 'lemon', 'kiwi')
+console.log(fruits)   // remove apple and add there lemon and kiwi
