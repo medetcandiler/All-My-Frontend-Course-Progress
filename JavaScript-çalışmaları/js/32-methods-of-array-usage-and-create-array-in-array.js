@@ -181,10 +181,57 @@ const formDOM=document.querySelector('#form').addEventListener('submit', (e)=>{
 })
 
 
+// 10 dan buyuk olan elemanlarin 5 er katindan olusan yeni bir array olusturalim
+let myArr=[2, 5, 8, 11, 15, 17];
+
+let greaterTen=myArr.filter(function(num){
+    return num > 10
+})
+
+let myNewArr=greaterTen.map(multiply)
+function multiply(item){
+    return item * 5
+}
+console.log(myNewArr)
+
+// Elemanların arasında 5'ten büyük olan olan bir eleman varsa konsola "Beşten büyük bir eleman mevcut." yoksa "5'ten büyük eleman mevcut değil." yazdır.
+
+let dizi=[3, 6, 9, 14, 16];
+function myFunction(item){
+    let result=dizi.some(num=> num>5);
+    if(result){
+        console.log('5 ten buyuk var')
+    }else console.log('5 ten buyuk yok')
+}
+myFunction(dizi)
+
+// Uygun dizi metodunu kullanarak yukarıda verilen dizinin elemanlarının çarpımının sonucunu (24) veren bir fonksiyon yazınız.
+let arrayz=[2,3,4]
+let sum=1
+arrayz.forEach((item, i) => {
+    sum*= item
+});
+console.log(sum)
+
+let myNumbers=[4, 5, 7, 8, 3, 9, 1, 2, 7]
+myNumbers.sort((a,b)=>a-b)
+console.log(myNumbers)
+console.log(myNumbers[myNumbers.length-2])
+
+let numberD=[2, 3, 6, 6, 5]
+function getSecondBigNumber(num){
+    return num.sort((a,b)=>b-a)[2];
+}
+console.log(getSecondBigNumber(numberD))
 
 
 
 
 
+let numbers=[2, 3, 6, 6, 5]
 
-
+let x=numbers.sort((a,b)=>a-b)
+console.log(x)
+x.splice(x.length-2,2)
+console.log(x)
+console.log(x[x.length-1])
