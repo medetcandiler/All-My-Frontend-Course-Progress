@@ -88,7 +88,7 @@
 
 
 const random= (number)=>{
-    return Math.floor(Math.random()*(number+1));
+    return Math.floor(Math.random()*(number)+1);
 }
 let button=document.querySelector("#btn")
 button.onclick=function(){

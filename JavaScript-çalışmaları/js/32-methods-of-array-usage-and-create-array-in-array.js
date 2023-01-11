@@ -123,3 +123,68 @@ console.log(newArr, 'sonuna ekleme yaptik by using splice()')
 newArr.splice(Math.floor(newArr.length/2), 0, 'mid element')
 console.log(newArr,'ortaya element ekleme')  //[1, 2, 3, 4, 'mid element', 5, 6, 7, 'sonuna ekledim'] 
 
+
+/**********map() method */
+let users=[
+    {firstname: 'medet', lastname: 'diler'},
+    {firstname: 'aybis', lastname: 'erden'},
+    {firstname: 'mia', lastname: 'mincir'},
+]
+console.log('users object array', users)
+
+let UsersFullName=users.map(fnc)
+function fnc(item){
+    return [item.firstname, item.lastname].join(' ')
+}
+document.querySelector('#info2').innerHTML= UsersFullName
+console.log('map function denemsi',UsersFullName)
+
+//PRACTICE AREA WHEN YOU COME HERE TO PRACTICE AGAIN USE THIS AREA AND DELETE FORMER PRACTICE CODES 
+let practiceArr=['medet', 'diler', 'aybis', 'dunya']
+
+let number=[1, 2, 3, 4]
+let ages=[25, 26, 27]
+
+
+console.log('includes method: ', practiceArr.includes('dunya', practiceArr.length-1))
+
+let copyArr=practiceArr.slice(1,3)
+console.log(copyArr)
+
+console.log([1, 2, 3, 4, 5].slice(1,3))
+console.log([3, 7, 8, 11, 13].slice(-4, -1))
+
+let newNumbers=[1, 2, 3, 4, 5]
+let sqrNUmbers=newNumbers.map(sqr)
+function sqr(num){
+    return Math.sqrt(num)
+}
+console.log(sqrNUmbers)
+
+
+let age=[20, 30, 33, 36, 40, 42]
+// let formDOM=document.querySelector('#form').addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     document.querySelector('#info2').innerHTML= age.filter(checkAge)
+// })
+
+//function checkAge(ages){
+  //  return ages > document.querySelector('#checkAge').value
+//}//
+
+
+const formDOM=document.querySelector('#form').addEventListener('submit', (e)=>{
+    e.preventDefault()
+    document.querySelector('#info2').innerHTML= age.find(function(age){
+        return age> document.querySelector('#checkAge').value;
+    })
+})
+
+
+
+
+
+
+
+
+
