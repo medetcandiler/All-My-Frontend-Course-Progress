@@ -36,12 +36,54 @@ let ulDOM=document.querySelector('#list')
 //     }
 //    }
 
-let text=''
-for( let i=0 ; i<LOREM_LIST.length ; i++){
-    text += ` ${LOREM_LIST[i]}`
-    for(let x=10; x>=0 ; x--){
-        if(x===7){break;}
-        text += ` ${x}`
-    }
+// let text=''
+// for( let i=0 ; i<LOREM_LIST.length ; i++){
+//     text += ` ${LOREM_LIST[i]} <br>`
+//     for(let x=10; x>=0 ; x--){
+//         if(x===7){break;}
+//         text += ` ${x}`
+//     }
+// }
+// ulDOM.innerHTML= text
+
+
+
+// loop1:
+// for(i=0 ; i<5 ; i++){
+//     loop2:
+//     for(j=10 ; j>=9 ; j--){
+//         if(i === 1 && j===9){
+//             continue loop1
+//         }
+//         console.log(` i= ${i}, j= ${j}`)
+//     }
+// }
+
+// loop1:
+// for(let i=0 ; i<3 ; i++){
+//     for(j=0 ; j<5 ; j++){
+//         if(j=== 2){
+//             continue 
+//         }
+//         console.log('i:',i , 'j:', j)
+//     }
+// }
+
+const user={
+    fname:'medetcan',
+    lname:'diler',
+    age:25
 }
-ulDOM.innerHTML= text
+for(let value in user){
+    console.log(user[value], )
+}
+
+let cars=['bmw', 'kia', 'mercedes']
+for(let x of cars){
+    console.log(x)
+}
+
+let language='javascript'
+for(let x of language){
+    console.log(x)
+}
