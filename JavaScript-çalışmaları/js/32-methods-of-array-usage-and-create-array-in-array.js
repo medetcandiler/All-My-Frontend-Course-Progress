@@ -219,14 +219,21 @@ console.log(myNumbers)
 console.log(myNumbers[myNumbers.length-2])
 
 let numberD=[2, 3, 6, 6, 5]
+console.log('check max', Math.max(...numberD))
 function getSecondBigNumber(num){
-    return num.sort((a,b)=>b-a)[2];
+    let max= Math.max(...num)
+    num=num.filter( num  => num !== max)
+    return Math.max(num)
 }
-console.log(getSecondBigNumber(numberD))
+console.log(getSecondBigNumber(numberD),'----')
 
 
-
-
+function get5(nums){
+    let sorting=nums.sort((a,b)=>b-a);
+    sorting.splice(0,2);
+    return sorting[0]
+}
+console.log('get 5 deneme function:', get5(numberD))
 
 let numbers=[2, 3, 6, 6, 5]
 
@@ -235,3 +242,21 @@ console.log(x)
 x.splice(x.length-2,2)
 console.log(x)
 console.log(x[x.length-1])
+
+//reduce() method :
+let sayilar=[175, 50, 25];
+// let y=0;
+// for(let i of sayilar){
+//     y += i;
+// }
+// console.log(y)
+let news=sayilar.reduce((acc,val)=>{
+    return acc - val
+})
+console.log(news,'deneme')
+
+const t=sayilar.find((num)=>num>50)
+console.log(t)
+
+
+
