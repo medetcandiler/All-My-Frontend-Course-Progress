@@ -26,9 +26,9 @@ const person=[
         languages: ['html', 'css', 'js'],
     },
     {
-        name: 'taylan',
+        name: 'murat',
         age: 33,
-        languages:['wp', 'html', 'css']
+        languages:['muhendis', 'teklaci', 'demirci']
     }
 ]
 const greaterThanThirty=person.filter(item => item.age>30)
@@ -36,3 +36,14 @@ console.log(greaterThanThirty)
 
 const whoKnowsJs=person.filter(value=> value.languages.includes('js'))
 console.log(whoKnowsJs)
+
+
+let simpleArr=['a', 'b', 'c', 'd']
+let myObject={
+    fname:'medet',
+    lname:'diler',
+    age:26
+}
+for(let x in myObject){
+    console.log(myObject[x])
+}
