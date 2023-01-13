@@ -258,5 +258,3 @@ console.log(news,'deneme')
 const t=sayilar.find((num)=>num>50)
 console.log(t)
 
-
-
