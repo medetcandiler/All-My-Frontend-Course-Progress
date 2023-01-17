@@ -25,7 +25,7 @@ console.log('brand of laptop1 has been changed', laptop1['brand'])
 laptop1['version']='10.25.4'
 console.log(laptop1.version, 'verion of laptop1')
 
-// Anahtar bilgilerine ulasmak (keys) -> Object.keys(object)
+// Anahtar bilgilerine ulasmak (keys) -> Object.keys()
 // after usage this method it returns array 
 key = Object.keys(laptop1)  // we reach keys with this method but it returns our keys as an array.
 console.log(key, typeof key)
@@ -41,7 +41,7 @@ for(const i in laptop1){
     console.log(laptop1[i])
 }
 
-// reach the values of values in object -> Object.values(obj)
+// reach the values of values in object -> Object.values()
 // any JavaScript object can be converted to an array by using Object.values()
 
 let myArray=Object.values(laptop1)
@@ -55,10 +55,69 @@ function reverse(str){
     let myStrBack= revArr.join('');
     return myStrBack
 }
-console.log(reverse('anneeed '))
+console.log(reverse('anneeed'))
 document.querySelector('#demo').innerHTML= reverse('deneme')
 
-function foo(a, b=10, c){
-    console.log(foo.length)
+let number=[1, 2, 3, 4 ,5 ,6];
+console.log(number)
+let newNumber=number.slice(-4, -1)
+console.log(newNumber)
+
+const myPersonality={
+    name:'meddo',
+    lname:'diler',
+    age:26,
+    language:'english',
+    lang: function(){
+        return this.language
+    },
+    'bas ucum':'delik',
+    set lang(lang){
+        this.language=lang.toUpperCase()
+    },
+    get lang1(){
+        return this.language[0].toUpperCase()+this.language.slice(1)
+    }
 }
-console.log(foo(1, 2, 3), 'length of foo')
+myPersonality.lang='turkish'
+document.querySelector('#demo2').innerHTML= myPersonality.lang1
+
+console.log(myPersonality['bas ucum'])
+
+
+// let persons={
+//     name:'medet',
+//     lname:'diler',
+// }
+// let denemek= prompt('write sth here')
+// alert(persons[denemek])
+
+function object(key, value){ // computed property 
+    return{
+        [key]:value
+    }
+}
+let demo2DOM=document.querySelector('#demo2')
+console.log(object('car','jeep')) 
+
+let state = {
+	users:[
+		{name: "Brock", age: 25, favoriteColor: "red"},
+		{name: "Jessie", age: 17, favoriteColor: "yellow"},
+		{name: "James", age: 41, favoriteColor: "blue"},
+		{name: "Winnie", age: 18, favoriteColor: "purple"}
+	],
+	settings:{
+		version: "1.0.5",
+        DNS: "105.xx.xx.xx",
+        website: "https://www.example.com/"
+	},
+	banList: ["Ash", "Angelica", "Tom", "Jerry"]
+}
+
+demo2DOM.innerHTML= JSON.stringify(state['users'][2])
+demo2DOM.innerHTML+= `<br> ${state.banList[2]}`
+demo2DOM.innerHTML+=` <br><br><strong>${state.settings['website']}</strong>`
+demo2DOM.innerHTML+= state.users[2].favoriteColor
+
+
