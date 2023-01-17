@@ -20,8 +20,10 @@ console.log(montevideo, 'create an object by using Object.create()')
 //create an object
 let item1=new Object();
 let item2={}
-console.log('new Object() =>', typeof item1)
 console.log('{} =>', typeof item2)
+item1.fname='hayday'
+item1.lname='dardar'
+console.log('new Object() =>', typeof item1, item1)
 
 
 // Objects are addressed by refference noy by value. 
@@ -46,7 +48,7 @@ console.log(str == str2, 'str == str2') // it returns true because primitive dat
 
 let obj={fname:'medetcan'}
 let obj2={fname:'medetcan'}
-console.log(obj == obj2, 'obj == obj1') // even if they have exactly the same value it returs true because object addressed by refference not by value 
+console.log(obj == obj2, 'obj == obj1') // even if they have exactly the same value it returs false because object addressed by refference not by value 
 
 //objects consists of proporties and values 
 // accessing js properties 
@@ -109,7 +111,7 @@ const myObj = {
 }
 for( let x in myObj){
     console.log('myobj deneme for...in-', x)
-} // for..in with object return properties 
+} // for..in with object 
 
 let newArr=[1, 2, 3, 4, 5, 6]
 for(let x in newArr){
