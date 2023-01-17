@@ -43,14 +43,14 @@ console.log(newSalary,'newSalarys')
 
 
 
-//******************* random practices area 
+//******************* PRACTICE AREAA  // 
 const NUMBERS=[10, 34, 2, 6, 8, 13, 3, 9, -2 , -9, - 3,5, 11]
 function isBigEnoug(value){
     return value >= 10
 }
 
-console.log(NUMBERS.filter(isBigEnoug))
-console.log(NUMBERS)
+console.log(NUMBERS.filter(isBigEnoug),'is big enough' )
+console.log(NUMBERS,'is big enough')
 
 function isPrime(num){
     for(let i=2 ; num > i ; i++){
@@ -99,3 +99,40 @@ console.log('greater than 30 age',greatThanThirty)
 const whoKnowsJs=person.filter(item => item.languages.includes('JavaScript'))
 console.log('who knows js ', whoKnowsJs)
  
+
+const xyz=[1, 1, 2, 3, 4, 5, 6 , 6 ,6]
+// const removeDuplicate=xyz.filter((item, index, arr)=> arr.indexOf(item)==index)
+// console.log(removeDuplicate, 'remove duplicated with filter and indexOf ')
+
+// const removeDuplicate=xyz.filter((item, index, array)=> array.findIndex(obj=> obj==item)==index)
+// console.log(removeDuplicate,'removeduplicated')
+
+let newxyz= [new Set(xyz)]
+console.log(newxyz,'remove duplicated item -')
+
+// console.log(newxyz,' new set version of newxyz')
+console.log(xyz,'origin version of xyz')
+
+
+let findIndexMethod= xyz.findIndex(item => item === 5 )
+console.log('index of 5:', findIndexMethod)
+
+
+const arr = [
+    {
+      name: 'John',
+      location: 'Los Angeles',
+    },
+    {
+      name: 'Kate',
+      location: 'New York',
+    },
+    {
+      name: 'Mike',
+      location: 'New York',
+    },
+];
+const yyy= [...new Set(arr)]
+console.log('yyy',yyy)
+const xxx=arr.filter((item, index, arr)=> arr.findIndex(obj=> obj.location==item.location)==index)
+console.log('xxx: ',xxx)
