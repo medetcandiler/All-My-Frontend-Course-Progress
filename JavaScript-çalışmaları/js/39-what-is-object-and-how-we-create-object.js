@@ -7,6 +7,16 @@ let firstObject={
 console.log('type of arrayObj:', typeof arrayObj);
 console.log('type of firstObject:', typeof firstObject)
 
+//patika.dev exercise sample
+let countriesTalkSpanish={
+    continent:'South America',
+    language:'Spanish'
+}
+let montevideo=Object.create(countriesTalkSpanish) // it doesn't refference countriesTalkSpanish it just copy it prototyp properties
+montevideo.capitalCity='montevideo'
+console.log(montevideo, 'create an object by using Object.create()')
+
+
 //create an object
 let item1=new Object();
 let item2={}
@@ -17,7 +27,7 @@ console.log('{} =>', typeof item2)
 // Objects are addressed by refference noy by value. 
 let x='medetcan'
 let y = x 
-y='trabzon'
+y='new value'
 console.log(y, x) // y='trabzon' , x='medetcan'
 
 let object={
@@ -27,7 +37,16 @@ let object={
 }
 let z=object
 z.lname='diler yeni'
-console.log(object, z) // if you changed t o z it affect main object because the objects addressed by refference not by value.
+console.log(object, z) // if you changed to z.lname it affect main object because the objects addressed by refference not by value.
+
+// CHECKING OF OBJECT AND PRIMITIVE DATAS ADRESSED METHOD
+let str='medetcan'
+let str2='medetcan'
+console.log(str == str2, 'str == str2') // it returns true because primitive dates addressed by value 
+
+let obj={fname:'medetcan'}
+let obj2={fname:'medetcan'}
+console.log(obj == obj2, 'obj == obj1') // even if they have exactly the same value it returs true because object addressed by refference not by value 
 
 //objects consists of proporties and values 
 // accessing js properties 
@@ -126,3 +145,41 @@ const person={
 // we accessed our method by using person.fullName() 
 // we can easily describe fullName() as a method of the person object, fullName as a property.
 document.querySelector('#demo').innerHTML= person.fullName()
+
+
+//USING Object.values() 
+//any js object can be converted to array by using Object.values()
+
+const newPerson={
+    name:'mrt',
+    lname:'diler',
+    age:17,
+    fullInfo: function(){
+        let infoPerson=`the person is ${this.name} ${this.lname}. The person is ${this.age} years old`
+        return infoPerson
+    }
+}
+document.querySelector('#demo').innerHTML= newPerson.fullInfo()
+const newPersonArr= Object.values(newPerson)
+console.log(newPerson, 'object')
+console.log(newPersonArr, 'our object converted to array by using Object.values()')
+
+// USING JSON.stringfy()
+// any js object can be converted to a string with js function JSON.stringfy()
+const stringVersionOfObject= JSON.stringify(newPerson)
+document.querySelector("#demo").innerHTML= stringVersionOfObject
+console.log(stringVersionOfObject, typeof stringVersionOfObject, 'json.stringify function')
+
+// Stringify dates 
+// JSON.stringify converts dates in strings 
+const dayObj={
+    name:'medet',
+    date: function(){ return new Date().getDay()}
+}
+
+// NOTE THAT JSON.stringify() does not stringify functions
+
+// but also it is possibble to stringify array by usin JSON.stringify() function .
+const array=[1, 2, 3, 4 ,5]
+const arrayToString=JSON.stringify(array)
+console.log('sample of stringifying array', arrayToString , typeof arrayToString)
