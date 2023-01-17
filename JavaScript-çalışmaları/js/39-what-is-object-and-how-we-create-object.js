@@ -12,23 +12,31 @@ let countriesTalkSpanish={
     continent:'South America',
     language:'Spanish'
 }
-let montevideo=Object.create(countriesTalkSpanish) // it doesn't refference countriesTalkSpanish it just copy it prototyp properties
-montevideo.capitalCity='montevideo'
-console.log(montevideo, 'create an object by using Object.create()')
+countriesTalkSpanish={
+    language:'spanish',
+    continent:'south america'
+}
 
+console.log(countriesTalkSpanish,' countiries talk spanish')
 
 //create an object
+// with new Object
 let item1=new Object();
+//with object literal
 let item2={}
 console.log('{} =>', typeof item2)
 item1.fname='hayday'
 item1.lname='dardar'
 console.log('new Object() =>', typeof item1, item1)
-
+//with
+let montevideo=Object.create(countriesTalkSpanish) // it doesn't refference countriesTalkSpanish it just copy it prototyp properties
+montevideo.capitalCity='montevideo'
+console.log(montevideo, 'create an object by using Object.create()')
 
 // Objects are addressed by refference noy by value. 
 let x='medetcan'
 let y = x 
+document.querySelector('#demo2').innerHTML= y
 y='new value'
 console.log(y, x) // y='trabzon' , x='medetcan'
 
@@ -57,7 +65,7 @@ console.log(object['fname'])
 a='fname'
 console.log(object[a])  // all of them reach the fname value which is 'medet'
 
-document.querySelector('#info').innerHTML= `person is ${object['fname'] } and his last name is ${object.lname}`
+document.querySelector('#info').innerHTML= `person is ${object.age} and his last name is ${object.lname}`
 
 // js for..in loop loops through the properties of object.
 let text=''
@@ -81,7 +89,7 @@ for(let properties in object){
 delete object.fathername
 console.log('after deleting fathername property by using delete key', object)
 
-// just use delete keyword on objects 
+// use delete keyword just on objects 
 
 //nested objects 
 let myObject={
@@ -109,6 +117,17 @@ const myObj = {
     {name:"Fiat", models:["500", "Panda"]}
   ]
 }
+for(let x in myObj.cars){
+    let a=myObj.cars[x].name;
+    document.querySelector('#demo2').innerHTML+=  '<br><strong> ' + a + '</strong> <br>'
+    for(let i in myObj.cars[x].models){
+        let b=myObj.cars[x].models[i];
+        document.querySelector('#demo2').innerHTML+= ' '+b
+    }
+}
+
+
+
 for( let x in myObj){
     console.log('myobj deneme for...in-', x)
 } // for..in with object 

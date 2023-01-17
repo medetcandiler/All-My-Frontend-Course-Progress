@@ -57,3 +57,8 @@ function reverse(str){
 }
 console.log(reverse('anneeed '))
 document.querySelector('#demo').innerHTML= reverse('deneme')
+
+function foo(a, b=10, c){
+    console.log(foo.length)
+}
+console.log(foo(1, 2, 3), 'length of foo')
