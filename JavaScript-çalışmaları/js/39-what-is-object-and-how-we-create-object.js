@@ -52,11 +52,11 @@ console.log(object, z) // if you changed to z.lname it affect main object becaus
 // CHECKING OF OBJECT AND PRIMITIVE DATAS ADRESSED METHOD
 let str='medetcan'
 let str2='medetcan'
-console.log(str == str2, 'str == str2') // it returns true because primitive dates addressed by value 
+console.log(str === str2, 'str == str2') // it returns true because primitive dates addressed by value 
 
 let obj={fname:'medetcan'}
 let obj2={fname:'medetcan'}
-console.log(obj == obj2, 'obj == obj1') // even if they have exactly the same value it returs false because object addressed by refference not by value 
+console.log(obj === obj2, 'obj == obj1') // even if they have exactly the same value it returs false because object addressed by refference not by value 
 
 //objects consists of proporties and values 
 // accessing js properties 
@@ -101,6 +101,7 @@ let myObject={
         car3:'hyundai'
     }
 }
+console.log('------', myObject['cars']['car2'], myObject.cars.car2)
 console.log(myObject) 
 //to reach nested object element :
 console.log(myObject.cars.car2) // return jeep  
@@ -204,3 +205,4 @@ const dayObj={
 const array=[1, 2, 3, 4 ,5]
 const arrayToString=JSON.stringify(array)
 console.log('sample of stringifying array', arrayToString , typeof arrayToString)
+
