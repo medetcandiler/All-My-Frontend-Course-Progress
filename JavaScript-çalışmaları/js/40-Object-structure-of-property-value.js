@@ -246,3 +246,7 @@ const x6 = new RegExp();   // A new RegExp object
 const x7 = new Function(); // A new Funcction object
 const x8 = new Date();     // A new Date object
 
+// all JS objects inherit properties and methods from a protoype
+
+
+
