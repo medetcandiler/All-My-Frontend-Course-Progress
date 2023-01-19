@@ -50,34 +50,35 @@ myNotes=[...notes] // it allows us to copy notes to myNotes. whenever we change 
 myNotes[0]=100
 console.log('notes:', notes, 'myNotes:', myNotes)
 
-let [firstScore, secondScore, ...others]= notes
+let [firstScore, secondScore, ...others]= notes // if I forger to add (...) to the others it is became a thirh of array item.
 demoDOM.innerHTML= ` my average not is ${(firstScore+secondScore)/2}`
 console.log(others, firstScore, secondScore)
 
+function sum(){
+    for(let i=0; i<arguments.length; i++){
 
+    }
+}
 
+//function 
+//rest parameter (...)
+//it allows a function to treat an indefinite number of arguments as an array 
 
+function myFnc(...arguments){
+    let sum=0
+    for(let x of arguments){
+        sum += x
+    }
+    return sum
+}
+console.log(myFnc(1, 2, 3, 4,5,6, 7, 8, 9), 'sum function')
 
-
-
-
-
-
-
-
-
-// const arr1=[2, 3, 4, 5, 6 ,7]
-// let first2= arr1[0]
-// console.log(first2, 'primitive method')
-// const [first, , third, ...rest]= arr1
-
-// const myInfo={
-//     name:'meddo',
-//     lname:'diler',
-//     age:26,
-//     nationality:'turkish',
-// }
-
-// myInfo.language=['eng', 'tr']
-// console.log(myInfo)
-// const {name, lname, age, nation, languages}= myInfo
+const subtraction=(sayilar)=>{
+    return num1 - num2
+}
+const sayilar={
+    sayi1: 5,
+    sayi2: 3
+}
+let {sayi1:num1, sayi2:num2}= sayilar
+console.log(subtraction(sayilar))
