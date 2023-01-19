@@ -167,3 +167,29 @@ const human={
 let a= human.display.bind(human)
 setTimeout(a, 3000)
 
+//function 
+function toCelcius(fahrenheit){
+    return (5/9)*(fahrenheit-32)
+}
+console.log(toCelcius)
+
+//finding the largest number
+function maxNumber(){
+    let max= Math.max()
+    for(let i=0; i<arguments.length; i++){
+        if(arguments[i]>max){
+            max=arguments[i]
+        }
+    }
+    return max;
+}
+console.log(maxNumber(4, 5, 6, 7 ,8, 20))
+
+function sumAll(){
+    let sum=0
+    for(let i=0; i<arguments.length; i++){
+        sum += arguments[i]
+    }
+    return sum
+}
+console.log(sumAll(3, 4, 5, 6, 7))
