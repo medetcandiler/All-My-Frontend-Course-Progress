@@ -22,7 +22,7 @@ console.log( user,password, isActive, ServerIp, 'values of object properties')
 
 //************* Obje icindeki bazi bilgilerin cikarilmasi */
 let{userName:user2, password:pass, isActive:isActv, ip:serverIp2, ...restOfIt}= setting
-console.log(user2, pass, isActv, serverName , restOfIt)
+console.log(user2, pass, isActv, serverName , ...restOfIt)
 
 //objectin destructiring ile kopyalanmasi
 let setting2= setting
