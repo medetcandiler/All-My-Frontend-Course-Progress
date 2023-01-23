@@ -100,3 +100,30 @@ function getInputValue(){
         document.querySelector('#number').value=''
     }
 }
+//split() splits a string into an array as a new array
+function reverseStr(s){
+    try{
+        if(!isNaN(s)) throw 'errorrrr write only string'
+        s=s.split('').reverse().join('');
+    }catch(e){
+        console.log(e);
+    }finally{
+        console.log(s)
+    }
+}
+reverseStr(23)
+
+
+// function reverseString(s) {
+//     try{
+//         if(!isNaN(s)) throw 's.split is not a function'
+//     }catch(e){
+//         console.log(e);
+//     }finally{
+//         let returnArr= s.split('');
+//         let reverArr= returnArr.reverse();
+//         let returnStr= reverArr.join('')
+//         console.log(returnStr)
+//     }
+// }
+// reverseString('13')
