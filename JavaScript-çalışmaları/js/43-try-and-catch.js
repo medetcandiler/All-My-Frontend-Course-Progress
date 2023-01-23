@@ -66,20 +66,37 @@ myPromise.then(
 
 // input sample 
 
-let formDOM=document.querySelector('#form').addEventListener('submit', myFnc)
-function myFnc(event){
-    event.preventDefault()
-    let writeDOM=document.querySelector('#demo2');
-    writeDOM.innerHTML=''
-    let inputDOM=document.querySelector('#age')
-    
+// document.querySelector('#form').addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     let ageDOM=document.querySelector('#age').value
+//     let alertDOM=document.querySelector('#demo2')
+//     try{
+//         if(ageDOM==''){
+//             throw ' write smth'
+//         }
+//     }catch (err){
+//         alertDOM.innerHTML= err
+//     }
+// })
+
+function getInputValue(){
+    let alertDOM=document.querySelector('#error')
+    alertDOM.innerHTML=''
+    alertDOM.style.color='red'
+    let inputDOM=document.querySelector('#number').value;
     try{
-        if(inputDOM.value.trim()== '')throw 'write sth'
-        if(isNaN(inputDOM.value)) throw 'write number'
-        if(inputDOM.value<5) throw 'too low'
-        if(inputDOM.value>10) throw 'quiet big'
-    }catch(e){
-        writeDOM.innerHTML= e
+        if(inputDOM.trim()=='') throw 'is empty'
+        if(isNaN(inputDOM)) throw ' write number'
+        if(inputDOM>20) throw 'too big'
+        if(inputDOM<10) throw 'too small'
+
+        if(inputDOM){
+            alertDOM.style.color= 'green'
+            throw 'is ' + inputDOM
+        }
+    } catch (e){
+        alertDOM.innerHTML= 'input ' +e
+    }finally{
+        document.querySelector('#number').value=''
     }
-    inputDOM.value=''
 }
