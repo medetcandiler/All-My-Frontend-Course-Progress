@@ -74,14 +74,14 @@ const myPersonality={
     },
     'bas ucum':'delik',
     set lang(lang){
-        this.language=lang.toUpperCase()
+        this.language=lang
     },
     get lang1(){
         return this.language[0].toUpperCase()+this.language.slice(1)
     }
 }
-myPersonality.lang='turkish'
-document.querySelector('#demo2').innerHTML= myPersonality.lang1
+myPersonality.lang='asdfsdf'
+console.log(myPersonality.lang1, 'aAAAAAAAASDASDSAD')
 
 console.log(myPersonality['bas ucum'])
 
@@ -250,3 +250,23 @@ const x8 = new Date();     // A new Date object
 
 
 
+
+
+function MyPersonal(name, lname , age, color){
+    this.name=name
+    this.lastName=lname
+    this.age= age 
+    this.eyeColor= color
+    this.shortInfo= function (){
+        console.log(this.name, this.lastName)
+    }
+}
+
+const medet= new MyPersonal('medetcan', 'diler', '26', 'brown')
+
+medet.continent='turkey'
+medet.language=['eng', 'tr']
+
+
+
+MyPersonal.prototype.nationality='deneme'

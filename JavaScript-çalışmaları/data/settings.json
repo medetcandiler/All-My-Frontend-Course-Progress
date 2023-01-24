@@ -1,0 +1,8 @@
+{
+    "userName": "fake user" ,
+    "password": 123123,
+    "serverIP": "127.0.0.1",
+    "serverName": "meddo.com",
+    "isAuth": true ,
+    "IDs": [1, 2, 3, 4, 5, 6]
+}

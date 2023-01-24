@@ -100,6 +100,8 @@ function getInputValue(){
         document.querySelector('#number').value=''
     }
 }
+
+
 //split() splits a string into an array as a new array
 function reverseStr(s){
     try{
@@ -127,3 +129,24 @@ reverseStr(23)
 //     }
 // }
 // reverseString('13')
+
+
+
+
+// function getInputValue(){
+//     let inputDOM=document.querySelector('#number')
+//     let errorDOM=document.querySelector('#error')
+//     errorDOM.style.color='red'
+//     try{
+//         if(inputDOM.value < 5) throw 'too low'
+//         if(inputDOM.value>= 5){
+//             errorDOM.style.color='green'
+//             errorDOM.innerHTML=inputDOM.value + ' ' +'enoug big'
+//         }
+//         if(isNaN(inputDOM.value)) throw ' write only number'
+//     }catch(e){
+//         errorDOM.innerHTML= inputDOM.value + ' ' + e
+//     }finally{
+//         inputDOM.value=''
+//     }
+// }
