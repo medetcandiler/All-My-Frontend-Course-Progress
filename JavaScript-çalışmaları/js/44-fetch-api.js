@@ -13,9 +13,9 @@ fetch("https://jsonplaceholder.typicode.com/posts").then(
 ).then(
     postJson => {
         console.log(postJson)
-          postJson.map(item => {
+          postJson.forEach(item => {
             let newLi= document.createElement('li')
-            newLi.textContent+= item.title
+            newLi.textContent+= item.body
             listDOM.appendChild(newLi)
           })
     }

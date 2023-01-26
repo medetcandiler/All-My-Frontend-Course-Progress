@@ -9,20 +9,24 @@ let setting={
     serverName:'diler.org',
     domainName:'medet@diler.org'
 }
+
+
 //***********OBJE ICINDEKI BILGILERIN TEK SEFERDE CIKARILMASI
 //let userName= setting.userName  primitive way to reach object properties
 //demoDOM.innerHTML= userName
 //RENAME && DESTRUCTIRING
+
 let {userName:user, password, isActive, ip:ServerIp,  serverName, domainName}= setting
 demoDOM.innerHTML=password + user
 console.log( user,password, isActive, ServerIp, 'values of object properties')
+
  // if we change the name of property when using destructiring it means renamed the decleration we need to use new name to reach them if we use first name of property we come across error.
  //we use destructiring with let decleration it means we cannot use them later because they are declerad with let keyword
 
 
 //************* Obje icindeki bazi bilgilerin cikarilmasi */
 let{userName:user2, password:pass, isActive:isActv, ip:serverIp2, ...restOfIt}= setting
-console.log(user2, pass, isActv, serverName , ...restOfIt)
+console.log(user2, pass, isActv, serverName )
 
 //objectin destructiring ile kopyalanmasi
 let setting2= setting
@@ -82,3 +86,75 @@ const sayilar={
 }
 let {sayi1:num1, sayi2:num2}= sayilar
 console.log(subtraction(sayilar))
+
+
+
+// PRACTICE AREA 
+
+let mySettings={
+    userNames:'meddo',
+    passs:'badPassword',
+    isActives:false,
+    ip:'127.x.x.x',
+    serverNames:'diler.org',
+    domainNames: {
+        id3:'132.00.00.xx',
+        servers:'diler.org'
+    }
+}
+
+let denemek= {...mySettings} // copy way 
+denemek.userNames= ' alirliarrs'
+console.log(denemek);
+console.log(mySettings);
+
+let denemek2=Object.assign({}, mySettings) // another coppy way
+denemek2.userNames='denemeksdfsddsf'
+console.log(denemek2, 'denemekl2', mySettings);
+
+
+let scores=[1, 2, 3, 4, 5]
+scores2= JSON.parse(JSON.stringify(scores)) // way of copy 
+scores2[Math.floor(scores2.length/2)]= 12
+console.log(scores2);
+console.log(scores);
+
+
+
+const person={
+    name: 'aybis',
+    age:  33,
+    languages: {
+        native: 'englusg',
+        secong: 'trksh'
+    }
+}
+
+const person2={
+    name: 'medet',
+    age:  26,
+    favoriteFood:'tiramisu',
+    languages: {
+        native: 'eng',
+        second: 'tr'
+    }
+}
+
+function printSth({name, age, favoriteFood='pizza'}){
+    console.log(name, age, favoriteFood);
+}
+
+
+printSth(person2)
+
+function fncWithRest(...arg){
+    let number=0
+    let x=4
+    for(let x of arg){
+        number += x
+    }
+    document.querySelector('#demo').innerHTML=number
+}
+
+fncWithRest(1, 3, 4, 5 ,6 )
+
