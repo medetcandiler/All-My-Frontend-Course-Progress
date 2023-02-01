@@ -1,7 +1,8 @@
-//let slugify = require('slugify'); // it is not working because we add on package.json file "type": "module". What with the changes we need to use import syntax instead of require..
+import  hello, {sum, subtraction, text, user, myBetterHalf} from './myModule.js'
 
-//import slugify from 'slugify'  // ES6 module import syntax.
-
-import Topla from "./my-modue.js"
-
-console.log(sum(5, 6))
+console.log(text)
+console.log(sum(6, 7));
+console.log(subtraction(5, 6));
+hello('medet');
+console.log(user) //object
+console.log(myBetterHalf) // array
