@@ -108,10 +108,8 @@ import axios from 'axios';
 
 const getPosts = function(){
     return new Promise(async (resolve, rejected) => {
-    const { data } = await axios('https://jsonplaceholder.typicode.com/posts/3');
-    if(data){
-        resolve(data)
-    }else rejected('data is not here')
+        const { data } = await axios('https://jsonplaceholder.typicode.com/posts/2');
+        if(data){resolve(data)}else rejected('data is not exist')
 })}
 
 const getPost2 = function(){
@@ -121,14 +119,18 @@ const getPost2 = function(){
 })}
 
 
+async function trying(){
+    await getPosts().then(
+        success => console.log(success),
+        err => console.log(err)
+    )
+    await getPost2().then(
+        data2=> console.log(data2),
+        err => console.log(err)
+    )
+}
 
-( async()=>{
-    const user= await getPosts()
-
-    const post = await getPost2()
-    
-    console.log(post, user)
-})()
+trying()
 
 // ( async() => {
 //     const Data= await (await fetch('https://jsonplaceholder.typicode.com/posts/1')).json();
