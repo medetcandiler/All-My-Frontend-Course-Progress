@@ -151,3 +151,4 @@ const getPost2 = function(){
 //     (success) => console.log(success),
 //     (err) => console.log(err)
 // )
+
