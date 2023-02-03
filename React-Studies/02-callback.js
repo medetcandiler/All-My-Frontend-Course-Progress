@@ -32,6 +32,22 @@
 // }
 // getData()
 
+//for practice ----
+// async function getData(){
+//     const data = await (await fetch('https://jsonplaceholder.typicode.com/posts/1')).json()
+//     const data2 = await (await fetch('https://jsonplaceholder.typicode.com/posts/2')).json()
+//     const data3 = await (await fetch('https://jsonplaceholder.typicode.com/posts/3')).json()
+//     console.log(data, data2 ,data3)
+// }
+// getData()
+
+// const getData= async () => {
+//     const { data } = await axios('https://jsonplaceholder.typicode.com/posts/1')
+//     const { data:data2 } = await axios('https://jsonplaceholder.typicode.com/posts/2')
+//     const { data:data3 } = await axios('https://jsonplaceholder.typicode.com/posts/3')
+//     console.log('data 1 :' , data, 'data 2 :', data2, 'data 3 : ', data3)
+// }
+// getData()
 
 
 
@@ -58,6 +74,10 @@ import axios from 'axios';
 // }
 // getData()
 
+(async ()=>{
+    const data = await (await fetch('https://jsonplaceholder.typicode.com/posts/1')).json()
+    console.log(data)
+})();
 
 // function cookPasta(){
 //     let makarna= false;
@@ -106,31 +126,31 @@ import axios from 'axios';
 //     (rejected)=> console.log(rejected, 'rejected')
 // )
 
-const getPosts = function(){
-    return new Promise(async (resolve, rejected) => {
-        const { data } = await axios('https://jsonplaceholder.typicode.com/posts/2');
-        if(data){resolve(data)}else rejected('data is not exist')
-})}
+// const getPosts = function(){
+//     return new Promise(async (resolve, rejected) => {
+//         const { data } = await axios('https://jsonplaceholder.typicode.com/posts/2');
+//         if(data){resolve(data)}else rejected('data is not exist')
+// })}
 
-const getPost2 = function(){
-    return new Promise(async(resolve, rejected) => {
-        const { data } = await axios('https://jsonplaceholder.typicode.com/posts/5');
-        resolve(data)
-})}
+// const getPost2 = function(){
+//     return new Promise(async(resolve, rejected) => {
+//         const { data } = await axios('https://jsonplaceholder.typicode.com/posts/5');
+//         resolve(data)
+// })}
 
 
-async function trying(){
-    await getPosts().then(
-        success => console.log(success),
-        err => console.log(err)
-    )
-    await getPost2().then(
-        data2=> console.log(data2),
-        err => console.log(err)
-    )
-}
+// async function trying(){
+//     await getPosts().then(
+//         success => console.log(success),
+//         err => console.log(err)
+//     )
+//     await getPost2().then(
+//         data2=> console.log(data2),
+//         err => console.log(err)
+//     )
+// }
 
-trying()
+// trying()
 
 // ( async() => {
 //     const Data= await (await fetch('https://jsonplaceholder.typicode.com/posts/1')).json();
