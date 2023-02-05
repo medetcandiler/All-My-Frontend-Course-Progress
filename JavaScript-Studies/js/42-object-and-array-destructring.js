@@ -10,15 +10,19 @@ let setting={
     domainName:'medet@diler.org'
 }
 
+let passwords = setting.password 
+console.log('older destructure way ', passwords)
+let userNamesis= setting.userName
+console.log('older destructure way ', userNamesis)
 
 //***********OBJE ICINDEKI BILGILERIN TEK SEFERDE CIKARILMASI
 //let userName= setting.userName  primitive way to reach object properties
 //demoDOM.innerHTML= userName
 //RENAME && DESTRUCTIRING
 
-let {userName:user, password, isActive, ip:ServerIp,  serverName, domainName}= setting
+let { userName: user, password, isActive, serverName: serverIp,...restist} = setting
 demoDOM.innerHTML=password + user
-console.log( user,password, isActive, ServerIp, 'values of object properties')
+console.log( user,password, isActive, serverIp, 'values of object properties')
 
  // if we change the name of property when using destructiring it means renamed the decleration we need to use new name to reach them if we use first name of property we come across error.
  //we use destructiring with let decleration it means we cannot use them later because they are declerad with let keyword
@@ -26,7 +30,7 @@ console.log( user,password, isActive, ServerIp, 'values of object properties')
 
 //************* Obje icindeki bazi bilgilerin cikarilmasi */
 let{userName:user2, password:pass, isActive:isActv, ip:serverIp2, ...restOfIt}= setting
-console.log(user2, pass, isActv, serverName )
+console.log(user2, pass, isActv)
 
 //objectin destructiring ile kopyalanmasi
 let setting2= setting
