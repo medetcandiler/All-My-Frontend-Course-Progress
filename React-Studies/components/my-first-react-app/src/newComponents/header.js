@@ -16,7 +16,20 @@ function Indicator(){
     );
 }
 
+const isLoggedIn =  false
+
+const myPersonalInfo={
+    fname: 'medet', 
+    lname: 'diler',
+    age: 27 ,
+    fullInfo: function(){
+        return `I am ${this.fname} ${this.lname}. I am ${this.age}`
+    }
+
+}
 export {
     Indicator,
-    Header
+    Header,
+    myPersonalInfo,
+    isLoggedIn
 }

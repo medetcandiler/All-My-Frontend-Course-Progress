@@ -1,24 +1,48 @@
 import './App.css';
-import {Header ,Indicator} from './newComponents/header'
-import { isloggedIn, myPersonalInfo } from './newComponents/user-info';
+import React from 'react';
+// import {Header ,Indicator, myPersonalInfo, isLoggedIn} from './newComponents/header'
+import {comment, Comment, formatDate} from './newComponents/hello-kitty'
+import User from './newComponents/user'
 
 
+const address={
+    title: 'Kartal/Istanbul',
+    zip: 24334,
+    country: 'Turkiye'
+}
+const friends= [
+    {   
+        id:1,
+        name:'medet'
+    },
+    {
+        id:2,
+        name: 'trying'
+    },
+    {
+        id:3,
+        name: 'jhon'
+    }
 
-
+]
 
 function App(){
-    // return(
-    //     React.createElement('div', null, 'hello')
-    // )
     return(
-        <>s
-            <Header />
-            <Indicator />
-            <p className='myPClass'>
-                { isloggedIn ?  myPersonalInfo.fullInfo() : 'giris yapilmadi'}
-            </p>
-            <h1>{new Date().toLocaleTimeString()}</h1>
-        </>
+        <React.Fragment>
+            <Comment 
+                date={comment.date}
+                text ={comment.text}
+                author={comment.author}
+            />
+            <User 
+            fname='medetcan'
+            lname='diler'
+            age={'27'}
+            isLoggedIn={true}
+            address={address}
+            friends={friends}
+            />
+        </React.Fragment>
     );
 }
 
