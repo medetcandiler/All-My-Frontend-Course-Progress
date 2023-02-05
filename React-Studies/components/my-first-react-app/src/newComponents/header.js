@@ -6,7 +6,7 @@ function Header(props){
     );
 }
 
-export function Indicator(){
+function Indicator(){
     return(
         <div className="container">
             <p>
@@ -16,4 +16,7 @@ export function Indicator(){
     );
 }
 
-export default Header;
+export {
+    Indicator,
+    Header
+}

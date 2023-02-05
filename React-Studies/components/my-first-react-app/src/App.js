@@ -1,29 +1,21 @@
 import './App.css';
-import Header, {Indicator} from './newComponents/header'
+import {Header ,Indicator} from './newComponents/header'
+import { isloggedIn, myPersonalInfo } from './newComponents/user-info';
 
-const myPersonalInfo= {
-    fname: 'medet',
-    lname: 'diler',
-    age : 27,
-    languages: ['en', 'tr'],
-    fullInfo : function(){
-        return `my name is ${fname} ${lname}...`
-    }
-}
 
-const { fname, lname, fullInfo} = myPersonalInfo;
-const isloggedIn =true;
+
+
 
 function App(){
     // return(
     //     React.createElement('div', null, 'hello')
     // )
     return(
-        <>
+        <>s
             <Header />
             <Indicator />
             <p className='myPClass'>
-                { isloggedIn ?  fullInfo() : 'giris yapilmadi'}
+                { isloggedIn ?  myPersonalInfo.fullInfo() : 'giris yapilmadi'}
             </p>
             <h1>{new Date().toLocaleTimeString()}</h1>
         </>
