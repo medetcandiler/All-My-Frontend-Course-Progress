@@ -1,8 +1,8 @@
 import './App.css';
 import React from 'react';
 // import {Header ,Indicator, myPersonalInfo, isLoggedIn} from './newComponents/header'
-import Car from './newComponents/props'
-import User from './newComponents/user'
+import Car from './components/props'
+import User from './components/user'
 
 
 const address={
