@@ -43,7 +43,7 @@ User.propTypes= {
 
 User.defaultProps = {
     isLoggedIn: true,
-    fname: 'deneme'
+    fname: 'Autofilled'
 }
 
 export default User;
