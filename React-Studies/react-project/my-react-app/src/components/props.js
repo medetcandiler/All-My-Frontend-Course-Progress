@@ -6,8 +6,7 @@ export default function Car( {car, owner, score, isCarExist}){
                 <h1>Car is not exist here. Please Try again to find out the car.</h1>
             </>
         )
-    }
-    return(
+    }else return(
         <>
             <h2>
                 What with all the happiness I am kind of happy today. And this is a {car.model} model car and brand is {car.cars[2]}.

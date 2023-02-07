@@ -1,25 +1,28 @@
 import PropTypes, { object, oneOfType } from "prop-types";
 
-function User( { fname,lname, age, isLoggedIn, friends, address} ){
+function User( { fname ,lname, age, isLoggedIn, friends, address} ){
     if(!isLoggedIn){
        return (
             <>
                 <h1>the user cannot find please try again..</h1>
             </>
        )
-    }
-    return (
+    }else return (
         <>
             <h2>
                 {
-                    ` User informations => name:${fname} surname:${lname} age:${age}`
+                    ` User informations => name: ${fname} surname:${lname} age:${age}`
                 }
             </h2>
             <div>
                 {`The users addresses informations => The user lives in ${address.country} and ${address.title} and also zip number of the user is ${address.zip}`}
             </div>
             <br />
-            {friends.map( item => <div key={item.id}> {item.name}</div>)}
+            {friends.map((item, i) => {
+                return <div key={i}>
+                    {item.name}
+                </div> 
+            })}
         </>
 
     )
@@ -40,7 +43,7 @@ User.propTypes= {
 
 User.defaultProps = {
     isLoggedIn: true,
-    fname: 'isimsiz'
+    fname: 'deneme'
 }
 
 export default User;

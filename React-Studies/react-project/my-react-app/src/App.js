@@ -28,7 +28,7 @@ const friends= [
 
 const car={
     cars: ['toyota', 'mercedes', 'bmw'],
-    model: 'true'
+    model: 'SUV'
 }
 const numbers=[30, 40, 50, 60, 100]
 
@@ -36,7 +36,6 @@ function App(){
     return(
         <React.Fragment>
             <User 
-            // fname='medetcan'
             lname='diler'
             age={'27'}
             address={address}
