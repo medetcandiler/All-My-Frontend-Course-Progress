@@ -28,5 +28,5 @@ Car.propTypes={
 }
 
 Car.defaultProps = {
-    isCarExist: false,
+    isCarExist: true,
 }

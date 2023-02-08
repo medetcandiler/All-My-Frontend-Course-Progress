@@ -1,4 +1,7 @@
-function Header(props){
+import { useState } from "react";
+import PropTypes from 'prop-types';
+
+function Header(){
     return(
         <nav>
             <h2>welcome my first react header component I will create whole page by using a lot of component in the future. Wait for that and I am aware of that you cannot wait... </h2>
@@ -6,17 +9,18 @@ function Header(props){
     );
 }
 
-function Indicator(){
+function Indicator({date, personal}){
     return(
         <div className="container">
-            <p>
-                {new Date().getFullYear()}
-            </p>
+            <div>
+                {date} {personal.fullInfo()}  
+                <h2>{new Date().getFullYear()}</h2>
+            </div>
         </div>
     );
 }
 
-const isLoggedIn =  false
+
 
 const myPersonalInfo={
     fname: 'medet', 
@@ -31,5 +35,12 @@ export {
     Indicator,
     Header,
     myPersonalInfo,
-    isLoggedIn
 }
+
+Indicator.propTypes={
+    date: PropTypes.number,
+    personal: PropTypes.shape({
+        fname: PropTypes.string
+    })
+}
+

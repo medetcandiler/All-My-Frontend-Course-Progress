@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-// import {Header ,Indicator, myPersonalInfo, isLoggedIn} from './newComponents/header'
+import {Header ,Indicator, myPersonalInfo} from './components/header'
 import Car from './components/props'
 import User from './components/user'
 
@@ -35,7 +35,15 @@ const numbers=[30, 40, 50, 60, 100]
 function App(){
     return(
         <React.Fragment>
+            <Header />
+            <br />
+            <Indicator 
+            date={23}
+            personal={myPersonalInfo}
+            />
+            <br />
             <User 
+            fname='medt'
             lname='diler'
             age={'27'}
             address={address}

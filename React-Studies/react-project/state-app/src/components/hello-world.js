@@ -1,8 +1,8 @@
 import {useState} from 'react';
 
 function Hello(){
-    const [name, setName] = useState('medet');
-    const [age, setAge] = useState(25);
+    const [name, setName] = useState('');
+    const [age, setAge] = useState();
     return(
         <>
             <div className="container">

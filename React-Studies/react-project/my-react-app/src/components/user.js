@@ -1,6 +1,6 @@
 import PropTypes, { object, oneOfType } from "prop-types";
 
-function User( { fname ,lname, age, isLoggedIn, friends, address} ){
+function User({fname, lname, age, address, friends, isLoggedIn}){
     if(!isLoggedIn){
        return (
             <>
