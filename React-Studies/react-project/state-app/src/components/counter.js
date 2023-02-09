@@ -1,12 +1,27 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
-export default function Counter(){
-    const[counter, setCounter] = useState(0)
+function Counter(){
+    const [counter, setCounter] = useState(0);
+
+
+    useEffect(() => {
+        console.log('Component has been mounted')
+        setInterval( () => setCounter(prev => prev + 2),1000);
+
+        return () => {
+            console.log('component has been unmounted');
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log('counter has been mounted')
+    },[counter])
+
     return(
         <div className="container">
-            <h3>{counter}</h3>
-            <button onClick={ ()=> setCounter(counter + 1) }>increase</button>
-            <button onClick={ ()=> setCounter( counter - 1)}>decrease</button>
+            <h2> {counter} </h2>
+            <button > START COUNT</button>
         </div>
-    )
+    );
 }
+export default Counter;
