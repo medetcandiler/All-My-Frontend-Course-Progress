@@ -1,9 +1,14 @@
 import React from 'react';
 
-function List(){
+
+function List( {listItem} ){
     return (
         <div>
-            List
+            {listItem.map( (item, i) => {
+                return (
+                    <div key={i}> Name:{item.fname} Number:{item.phoneNumber}</div>
+                )
+            })}
         </div>
     )
 }
