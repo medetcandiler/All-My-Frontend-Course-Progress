@@ -12,16 +12,16 @@ function Form( {contact, setContact}){
         setForm({...form, [e.target.name]:e.target.value})
     }
 
-    useEffect( () => {
-        console.log(contact)
-    },[contact])
+//    useEffect( () => {
+//     setForm(firstFormValue)
+//    },[contact]) 
    
     function submitValue(e  ){
         e.preventDefault();
         if(form.fname === '' | form.phoneNumber === ''){
             alert(' You have got to write sth. Please do not be blank name and phobe number')
         }else {
-            setContact([...contact, form])
+            setContact((prev)=>[...prev, form])
             setForm(firstFormValue)
         }
         

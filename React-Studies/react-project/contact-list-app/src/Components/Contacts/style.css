@@ -38,13 +38,23 @@ ul{
     margin: 2rem 0;
 }
 .list > li{
-    background-color:bisque;
+    background-color: peru;
     padding: 10px ;
     margin-bottom: 5px;
     cursor: pointer;
 }
-.false{
+.double{
     color: #020202;
-    font-weight: 700;
-    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+.single{
+    display: block;
+    text-align: center;
+    color: #020202;
+    font-weight: 600;
+}
+.contactAmount{
+    text-align: center;
 }

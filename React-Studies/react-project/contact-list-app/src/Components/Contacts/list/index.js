@@ -1,26 +1,21 @@
 import { useState } from 'react';
-import Contacts from '..';
+
 
 
 function List( {contact} ){
-    const [mouseClick, setMouseClick] = useState(false)
-    const [filter, setFilter] = useState('')
+    const [mouseClick, setMouseClick] = useState(false);
+    const [filter, setFilter] = useState('');
 
     function showNumber(){
         setMouseClick(!mouseClick)
     }
 
-
-    const filtered = contact.filter( (item, i) => {
+    const filtered = contact.filter( item => {
         return (
-            Object.keys(item).some ( (key) => {
-                return(
-                    item[key].toString().toLowerCase().includes(filter.toLowerCase())
-                )
-            })
-        )
-    } )
-
+            Object.keys(item).some ( (key) => 
+                item[key].toString().toLowerCase().includes(filter.toLowerCase()))
+        )})
+    
     return (
         <div>
             <br />
@@ -36,15 +31,18 @@ function List( {contact} ){
                         return(
                             <li 
                             key={i}
-                            onClick={showNumber}
-                            >
-                                {mouseClick ? <span className='false'>{item.fname} : {item.phoneNumber} </span> : <span className='false'>{item.fname}
-                                 </span>}
+                            onClick={showNumber}>
+                                {
+                                    mouseClick ? 
+                                    <span className='double'>{item.fname} <i>{item.phoneNumber}</i></span> :
+                                    <span className='single'>{item.fname}</span>
+                                }
                             </li>
                         )
                     })
                 }
             </ul>
+            <p className="contactAmount">Total Contact ({filtered.length})</p>
         </div>
     )
 }
@@ -55,6 +53,14 @@ export default List;
 
 
 
-
+// {mouseClick ? 
+//     <span className='false'>
+//         {item.fname} : {item.phoneNumber} 
+//         <i onClick={() => deleteContact(item.id)} class="fa-solid fa-xmark"></i>
+//     </span> 
+//     : 
+//     <span className='false'>
+//         {item.fname}
+//     </span>}
 
 
