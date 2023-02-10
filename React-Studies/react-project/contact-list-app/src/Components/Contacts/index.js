@@ -1,27 +1,40 @@
 import {useState, useEffect} from 'react';
 import List from './list'
 import Form from './form'
-import Filter from './filter'
-
+import './style.css'
 
 function Contacts(){
-    const[contact, setContact] = useState([]);
+    const [contact, setContact] = useState([
+        {
+            fname: 'medobis',
+            phoneNumber: 4395933495
+        },
+        {
+            fname: 'sahos',
+            phoneNumber: 4395933495
+        },
+        {
+            fname: 'demos',
+            phoneNumber: 12341234123
+        }
+    ]);
 
-    useEffect(() => {
-        console.log(contact)
-    },[contact])
     return(
-        <div>
-            <Filter />
-            <List 
-            listItem={contact}
+        <div className='contacts'>
+            <h1>Contacts</h1>
+            <List
+            contact={contact}
             />
-            <Form 
-            addContact={setContact}
-            originalContact={contact}
+            <Form
+            setContact={setContact}
+            contact={contact}
             />
         </div>
     );
 }
 
 export default Contacts
+
+
+
+

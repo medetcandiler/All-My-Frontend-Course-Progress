@@ -1,51 +1,63 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-const formEntries={fname:'' , phoneNumber:''}
 
-function Form({ addContact, originalContact}){
-    const[form, setForm] = useState(formEntries);
+const firstFormValue= {fname: '', phoneNumber:''}
 
-    useEffect(() => {
-        setForm(formEntries)
-    },[originalContact])
+function Form( {contact, setContact}){
+    const [form, setForm] = useState(firstFormValue)
 
-    function changeInput(e){
-        setForm({...form, [e.target.name]:e.target.value});
+
+    function changeValue(e){
+        setForm({...form, [e.target.name]:e.target.value})
     }
 
-    function submitValue(e){
+    useEffect( () => {
+        console.log(contact)
+    },[contact])
+   
+    function submitValue(e  ){
         e.preventDefault();
-        if(!(isNaN(form.fname)) || isNaN(form.phoneNumber)){
-            alert('write your Name using only characters and your number using only number ')
+        if(form.fname === '' | form.phoneNumber === ''){
+            alert(' You have got to write sth. Please do not be blank name and phobe number')
         }else {
-            addContact([...originalContact ,form])
-            
+            setContact([...contact, form])
+            setForm(firstFormValue)
         }
+        
     }
+
     return(
         <div>
             <form action="#" onSubmit={submitValue}>
                 <div>
                     <input 
-                    name="fname"
                     placeholder="Full Name:" 
-                    onChange={changeInput} 
-                    value={form.fname}/>
-                </div>
+                    name="fname"
+                    onChange={changeValue}
+                    value={form.fname}
+                    />
+                    </div>
                 <div>
-                    <input name="phoneNumber" 
+                    <input 
                     placeholder="Phone Number:" 
-                    onChange={changeInput} 
-                    value={form.phoneNumber}/>
+                    name='phoneNumber'
+                    onChange={changeValue}
+                    value={form.phoneNumber}
+                    />
                 </div>
-                <input 
-                type="submit" 
-                value="ADD" />
+                <div className="btn-container">
+                    <input className="btn" type="submit" value="ADD CONTACT" />
+                </div>
             </form>
         </div>
     )
 }
 
 export default Form;
+
+
+
+
+
 
