@@ -38,7 +38,7 @@ ul{
     margin: 2rem 0;
 }
 .list > li{
-    background-color: peru;
+    background-color: slategray;
     padding: 10px ;
     margin-bottom: 5px;
     cursor: pointer;
@@ -47,7 +47,7 @@ ul{
     color: #020202;
     font-weight: 600;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .single{
     display: block;

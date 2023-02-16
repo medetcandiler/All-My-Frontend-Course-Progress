@@ -1,13 +1,13 @@
 import PropTypes, { object, oneOfType } from "prop-types";
 
-function User({fname, lname, age, address, friends, isLoggedIn}){
-    if(!isLoggedIn){
-       return (
+function User({ fname, lname, age, address, friends, isLoggedIn }) {
+    if (!isLoggedIn) {
+        return (
             <>
-                <h1>the user cannot find please try again..</h1>
+                <h1 className="bg-secondary p-5 text-center text-danger">the user cannot find please try again..</h1>
             </>
-       )
-    }else return (
+        )
+    } else return (
         <>
             <h2>
                 {
@@ -21,14 +21,14 @@ function User({fname, lname, age, address, friends, isLoggedIn}){
             {friends.map((item, i) => {
                 return <div key={i}>
                     {item.name}
-                </div> 
+                </div>
             })}
         </>
 
     )
 }
 
-User.propTypes= {
+User.propTypes = {
     fname: PropTypes.string.isRequired,
     lname: PropTypes.string.isRequired,
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -42,7 +42,7 @@ User.propTypes= {
 }
 
 User.defaultProps = {
-    isLoggedIn: true,
+    isLoggedIn: false,
     fname: 'Autofilled'
 }
 

@@ -7,18 +7,18 @@ function Contacts(){
     const [contact, setContact] = useState([
         {
             id:0,
-            fname: 'medobis',
-            phoneNumber: 4395933495
+            fname: 'Medetcan Diler',
+            phoneNumber: 5392344777
         },
         {
             id:1,
-            fname: 'sahos',
-            phoneNumber: 4395933495
+            fname: 'Brendan Eich',
+            phoneNumber: 5345554433
         },
         {
             id:2,
-            fname: 'demos',
-            phoneNumber: 12341234123
+            fname: 'Tim Berners',
+            phoneNumber: 5345666777
         }
     ]);
 
@@ -27,6 +27,7 @@ function Contacts(){
             <h1>Contacts</h1>
             <List
             contact={contact}
+            setContact={setContact}
             />
             <Form
             setContact={setContact}

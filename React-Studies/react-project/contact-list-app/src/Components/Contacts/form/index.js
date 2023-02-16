@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 
 const firstFormValue= {fname: '', phoneNumber:''}
 
-function Form( {contact, setContact}){
+function Form( { setContact   }){
     const [form, setForm] = useState(firstFormValue)
 
 
     function changeValue(e){
-        setForm({...form, [e.target.name]:e.target.value})
+        setForm({...form, [e.target.name]:e.target.value});
     }
 
 //    useEffect( () => {
@@ -22,7 +22,7 @@ function Form( {contact, setContact}){
             alert(' You have got to write sth. Please do not be blank name and phobe number')
         }else {
             setContact((prev)=>[...prev, form])
-            setForm(firstFormValue)
+            // setForm(firstFormValue)
         }
         
     }

@@ -3,12 +3,10 @@ import { useState } from 'react';
 
 
 function List( {contact} ){
-    const [mouseClick, setMouseClick] = useState(false);
     const [filter, setFilter] = useState('');
-
-    function showNumber(){
-        setMouseClick(!mouseClick)
-    }
+    const [showNumber, setShowNumber ] = useState(true);
+   
+    
 
     const filtered = contact.filter( item => {
         return (
@@ -16,6 +14,8 @@ function List( {contact} ){
                 item[key].toString().toLowerCase().includes(filter.toLowerCase()))
         )})
     
+    
+
     return (
         <div>
             <br />
@@ -24,21 +24,20 @@ function List( {contact} ){
             placeholder='Serch For Data' 
             value={filter}
             onChange={ (e) => setFilter(e.target.value)}
-            />            
+            />
             <ul className='list'>
                 {
                     filtered.map( (item, i) =>{
-                        return(
-                            <li 
-                            key={i}
-                            onClick={showNumber}>
-                                {
-                                    mouseClick ? 
-                                    <span className='double'>{item.fname} <i>{item.phoneNumber}</i></span> :
-                                    <span className='single'>{item.fname}</span>
-                                }
-                            </li>
-                        )
+                        return <li 
+                        key={i}
+                        onClick={() => setShowNumber(!showNumber)}>
+                            {
+                                showNumber ? <span className='single'>{item.fname}</span> : 
+                                <span className='double'>
+                                     {item.fname} <i>{item.phoneNumber}</i>
+                                </span>
+                            }
+                        </li>
                     })
                 }
             </ul>

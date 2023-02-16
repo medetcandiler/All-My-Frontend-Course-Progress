@@ -6,7 +6,7 @@ function App() {
   return (
     <div className='container'>
         <Contacts />
-    </div >
+    </div > 
   );
 }
 
