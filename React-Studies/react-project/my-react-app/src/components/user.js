@@ -1,49 +1,34 @@
-import PropTypes, { object, oneOfType } from "prop-types";
+import React from 'react';
+import axios, { Axios } from 'axios';
+import { useState, useEffect } from 'react';
 
-function User({ fname, lname, age, address, friends, isLoggedIn }) {
-    if (!isLoggedIn) {
-        return (
-            <>
-                <h1 className="bg-secondary p-5 text-center text-danger">the user cannot find please try again..</h1>
-            </>
-        )
-    } else return (
+const User = () => {
+    const [datas, setDatas] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(res => res.json())
+        .then( data => setDatas(data))
+        .catch(err => console.log(err))
+        .finally(setIsLoading(false))
+    },[])
+
+
+    return (
         <>
-            <h2>
-                {
-                    ` User informations => name: ${fname} surname:${lname} age:${age}`
-                }
-            </h2>
             <div>
-                {`The users addresses informations => The user lives in ${address.country} and ${address.title} and also zip number of the user is ${address.zip}`}
+                <h1>Users</h1>
+                { isLoading && <div>Loading...</div>}
+                {datas.map( (el, i) => {
+                        return(
+                            <div key={el.id}>
+                                {el.name}
+                            </div>
+                            )})}
             </div>
-            <br />
-            {friends.map((item, i) => {
-                return <div key={i}>
-                    {item.name}
-                </div>
-            })}
         </>
-
-    )
-}
-
-User.propTypes = {
-    fname: PropTypes.string.isRequired,
-    lname: PropTypes.string.isRequired,
-    age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    friends: PropTypes.array,
-    isLoggedIn: oneOfType([PropTypes.string, PropTypes.bool]),
-    address: PropTypes.shape({
-        title: PropTypes.string,
-        country: PropTypes.string,
-        zip: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    })
-}
-
-User.defaultProps = {
-    isLoggedIn: false,
-    fname: 'Autofilled'
+    );
 }
 
 export default User;
