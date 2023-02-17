@@ -3,6 +3,7 @@ import React from "react";
 import Home from './components/Home/home';
 import About from './components/about-us/about-us';
 import Users from './components/users/users';
+import User from './components/user/user'
 import {
     BrowserRouter as Router,
     Routes,
@@ -34,6 +35,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/users" element={<Users />} />
+                    <Route path="/user/:id" element={<User />} /> 
                 </Routes>
             </div>
         </Router>

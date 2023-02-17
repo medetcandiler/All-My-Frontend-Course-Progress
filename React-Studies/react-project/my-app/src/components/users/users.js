@@ -1,24 +1,33 @@
-import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 function Users() {
-    const [datas, setDatas] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [users, setUsers] = useState([]);
+    const [isLogging, setIsLogging] = useState(true); 
 
     useEffect(() => {
         axios('https://jsonplaceholder.typicode.com/users')
-            .then(res => setDatas(res.data))
-            .catch(err => console.log('err',err))
-            .finally(() => setIsLoading(false))
+            .then(response => setUsers(response.data))
+            .catch(err => console.log(err))
+            .finally(() => setIsLogging(false));
     }, [])
 
     return (
-        <>
-            <h2>Users</h2>
-            {isLoading && <div>Loading...</div>}
-            {datas.map( el => <div key={el.id}>{el.name}</div>)}
-        </>
+        <div>
+            <h1>Users</h1>
+            <ul>
+                {isLogging && <div>Loading...</div>}
+                {users.map( el => {return(
+                    <li key={el.id}>
+                        <Link to={`/user/${el.id}`}>{el.name}</Link>
+                    </li>
+                )})}
+            </ul>
+        </div>
     )
 }
 
-export default Users;
+export default Users
+
