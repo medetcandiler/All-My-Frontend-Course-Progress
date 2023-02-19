@@ -1,32 +1,47 @@
-import Home from "./components/home";
-import Topics from "./components/topics";
+import React from 'react';
+import './App.css';
 import {
-    BrowserRouter as Router, Routes, Route, Link
+    Routes,
+    Route,
+    Link,
+    NavLink
 } from "react-router-dom";
-import "./App.css";
+import Home from './components/home';
+import About from './components/about';
+import UserRoutes from './components/userRoutes';
+import { color } from '@mui/system';
 
 function App() {
+
+
+
     return (
-        <Router>
+        <>
             <div className="App">
                 <nav>
                     <ul>
                         <li>
-                            <h1><Link to='/'>Home</Link></h1>
+                            <NavLink style={({ isActive }) =>  isActive ? {color:'red'} : {}} to='/'>HOME</NavLink>
                         </li>
                         <li>
-                            <h1><Link to='/topics'>topics</Link></h1>
+                            <NavLink style={({ isActive }) => {return isActive ? {color:'red'} : {}}} to='/about'>ABOUT</NavLink>
+                        </li>
+                        <li>
+                            <NavLink style={({ isActive }) => {return isActive ? {color:'red'} : {}}} to='/users'>USERS</NavLink>
                         </li>
                     </ul>
+                    <br />
+                    <hr />
                 </nav>
-                <hr />
+                <br />
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/topics/*" element={<Topics />} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='/users/*' element={<UserRoutes />} />
+                    <Route path='/about' element={<About />} />
                 </Routes>
             </div>
-        </Router>
+        </>
     );
 }
 
-export default App;
+export default App
