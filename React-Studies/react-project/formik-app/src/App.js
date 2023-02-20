@@ -35,7 +35,10 @@ function App() {
             email: ''
         },
         validate,
-        onSubmit: values => console.log(values)
+        onSubmit: (values, {resetForm}) => {
+            console.log(values);
+            resetForm( {values: ''})
+        }
     })
 
     return (
