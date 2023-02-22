@@ -1,5 +1,9 @@
 import { useFormik } from 'formik';
-import validationSchema from '../validation/validation';
+
+import fbLogo from '../../assests/images/fb.png';
+import gpLogo from '../../assests/images/gp.png';
+import twLogo from '../../assests/images/tw.png';
+import loginValidation from '../validation/loginValidation';
 
 function SignUp() {
 
@@ -7,61 +11,62 @@ function SignUp() {
         initialValues: {
             email: "",
             password: "",
-            passwordConfirm: "",
+            checkbox: []
         },
-        onSubmit: (values , {resetForm}) => {
-            console.log(values);
+        onSubmit: (values, { resetForm }) => {
+            setTimeout(alert(JSON.stringify(values, null, 2)), 500);
             resetForm()
         },
-        validationSchema
+        validationSchema: loginValidation
     });
 
     return (
         <>
-            <h1>Sign Up</h1>
-            <form action="#" onSubmit={handleSubmit}>
-                <label htmlFor="email">Email:</label>
+
+            <div className="icon-btn">
+                <img src={fbLogo} alt="facebook" />
+                <img src={gpLogo} alt="google" />
+                <img src={twLogo} alt="twitter" />
+            </div>
+            <form id='login' className='input-group' autoComplete='off' onSubmit={handleSubmit}>
                 <input name="email"
                     value={values.email}
+                    id='name'
+                    className='input-item'
+                    placeholder='Email Address'
                     onChange={handleChange}
                     onBlur={handleBlur}
                 />
 
                 {errors.email && touched.email && <div className='error'>{errors.email}</div>}
 
-                <br />
-                <br />
-
-                <label htmlFor="password">Password:</label>
                 <input
                     type="password"
                     name="password"
                     value={values.password}
+                    className='input-item'
+                    placeholder='Password'
                     onChange={handleChange}
                     onBlur={handleBlur}
                 />
 
                 {errors.password && touched.password && <div className='error'>{errors.password}</div>}
 
-                <br />
-                <br />
+                <div>
+                    <input
+                        type="checkbox"
+                        name="checkbox"
+                        className="check-box"
+                        value='User wantted to change or reset password'
+                        onChange={handleChange}
+                    />
+                    <i style={{ fontWeight: 'lighter' }}>Change or Reset Password</i>
+                </div>
 
-                <label htmlFor="passwordConfirm">Password Confirm:</label>
-                <input
-                    type="password"
-                    name="passwordConfirm"
-                    value={values.passwordConfirm}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                />
-                {errors.passwordConfirm && touched.passwordConfirm && <div className='error'>{errors.passwordConfirm}</div>}
-                <br />
-                <br />
 
-                <input type="submit" value="Submit" />
 
-                <br />
-                <br />
+                <input type="submit" value="Log In" className='sbmt-btn' />
+
             </form>
         </>
     );
