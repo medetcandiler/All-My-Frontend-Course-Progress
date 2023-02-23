@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import Header from './header';
 
 
@@ -6,13 +6,14 @@ import Header from './header';
 function Main({ text, setText, setDatas }) {
     const [number, setNumber] = useState(0);
 
-    const data = useMemo(() => {
-        return getDataFromSomeWhere(number)
-    },[number])
+    const increment = useCallback(() => {
+        return setNumber(prev => prev + 1)
+    }, [])
+
     return (
         <>
             <Header
-                data={data}
+                increment={ increment}
             />
             <h1>{number}</h1>
             <button onClick={() => setNumber(prev => prev + 1)}>Increase</button>
@@ -30,14 +31,5 @@ function Main({ text, setText, setDatas }) {
     )
 }
 
-function getDataFromSomeWhere(param){
-    console.log('calculating...');
-    for(let i=0 ; i < 100000000 ; i++){}
-    console.log('calculated')
-    return{
-        name: 'medet',
-        param
-    }
-}
 
 export default React.memo(Main)

@@ -1,14 +1,16 @@
 import React, { useMemo } from "react";
 
-function Header({ data }) {
+function Header({ increment }) {
     console.log("header component re-rendered");
 
 
     return (
         <>
             <code>
-                Header - {JSON.stringify(data)}
+                Header
             </code>
+            <br /><br />
+            <button onClick={increment}>Increase</button>
             <hr />
         </>
     );
