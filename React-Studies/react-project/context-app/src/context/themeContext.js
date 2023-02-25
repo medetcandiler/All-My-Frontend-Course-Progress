@@ -1,8 +1,8 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
-const ThemeContext = createContext(null);
+const ThemeContext = createContext(null)
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({children}) => {
     const [theme, setTheme] = useState('dark')
 
     const values = {

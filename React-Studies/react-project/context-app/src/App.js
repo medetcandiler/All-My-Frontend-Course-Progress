@@ -1,18 +1,17 @@
 import './App.css';
-import ThemeContext from './context/themeContext';
 import React from 'react';
+import Header from './components/header';
 import { ThemeProvider } from './context/themeContext';
 import Button from './components/button';
 
 
-
- 
 function App() {
-    
+
     return (
         <div className='container'>
             <ThemeProvider>
-                <Button />
+                <Header />
+                <Button>Theme Changer</Button>
             </ThemeProvider>
         </div>
     );

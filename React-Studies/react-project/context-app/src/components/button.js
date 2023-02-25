@@ -1,14 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import ThemeContext from '../context/themeContext';
-import { useState } from 'react';
+import { useContext } from 'react';
 
-function Button() {
-    const data = useContext(ThemeContext)
+function Button({children}) {
+    const { theme, setTheme} = useContext(ThemeContext)
+
     return (
-        <div>
-            <button onClick={() => data.setTheme(data.theme === 'dark' ? 'light' : 'dark')}>Button - ({data.theme})</button>
-        </div> 
+        <div className='button-container'>
+            <button className={`button-${theme}`} onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{children}</button>
+        </div>
     )
 }
 
 export default Button
+    
