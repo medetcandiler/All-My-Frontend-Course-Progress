@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import ThemeContext from '../context/themeContext';
+import UserContext from '../context/userContext';
+import ListItem from './listItem';
 
 
 function Header() {
-    const { theme, setTheme} = useContext(ThemeContext)
-
+    const { theme, setTheme } = useContext(ThemeContext)
+    const { user, setUser } = useContext(UserContext)
 
     return (
         <div className={`nav nav-${theme}`}>
             <h1>Logo</h1>
             <ul className='listItems'>
-                <li>item 1</li>
-                <li>item 2</li>
-                <li>item 3</li>
+                <ListItem />
             </ul>
         </div>
     )
