@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useContext } from 'react';
 
 const LogUserContext = createContext(null)
 
@@ -10,4 +10,4 @@ export const LogUserProvider = ({ children }) => {
     return <LogUserContext.Provider value={values}>{children}</LogUserContext.Provider>
 }
 
-export default LogUserContext;
+export const useLogUser = () => useContext(LogUserContext)

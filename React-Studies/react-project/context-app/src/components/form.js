@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react';
-import UserContext from '../context/userContext';
+import { useUser } from '../context/userContext';
 import ListItem from './listItem';
 
 function Form() {
     const [form, setForm] = useState('')
-    const { user, setUser } = useContext(UserContext)
-
+    const { user, setUser } = useUser()
     function handleChange(e) {
         setForm(e.target.value)
     }

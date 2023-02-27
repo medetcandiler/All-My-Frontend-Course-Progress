@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react';
-import LogUserContext from '../context/loginContext';
-import ThemeContext from '../context/themeContext';
+import { useLogUser } from '../context/loginContext';
+import {useTheme} from '../context/themeContext';
 
 function LogIn() {
-    const { data, setData } = useContext(LogUserContext)
-    const { theme } = useContext(ThemeContext)
+    const { data, setData } = useLogUser()
+    const { theme } = useTheme()
     const [loading , setLoading ] = useState(true)
 
     function handleLogIn(){
@@ -27,18 +27,14 @@ function LogIn() {
             setLoading(true)
         },2000)
     }
-
+<button className={`button-${theme}`} onClick={handleLogOut}>Log Out</button>
     return (
         <div className='logIn'>
             {
-                !data && <button onClick={handleLogIn} className={`button-${theme}`}>{loading ? 'Log In' : 'Loading...'}</button>
+                data ? <button className={`button-${theme}`} onClick={handleLogOut}>{loading ? 'Log Out' : 'Loading...'}</button> : <button className={`button-${theme}`} onClick={handleLogIn}>{loading ? 'Log In' : 'Loading...'}</button>
             }
-            <br />
-            { data === null ? '' : JSON.stringify(data) }
             <br /><br />
-            {
-                data && <button onClick={handleLogOut} className={`button-${theme}`}> {loading ? 'Log out' : 'Loading...'} </button>
-            }
+            { data === null ? '' : JSON.stringify(data) }
         </div>
     )
 }

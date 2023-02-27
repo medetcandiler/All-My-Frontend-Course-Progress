@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import UserContext from '../context/userContext';
+import { useUser } from '../context/userContext';
 
 
 function ListItem() {
-    const { user, setUser } = useContext(UserContext)
+    const { user, setUser } = useUser()
 
     return (
         <>

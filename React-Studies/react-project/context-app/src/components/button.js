@@ -1,9 +1,9 @@
 import React from 'react';
-import ThemeContext from '../context/themeContext';
-import { useContext } from 'react';
+import { useTheme } from '../context/themeContext';
+
 
 function Button({ children }) {
-    const { theme, setTheme } = useContext(ThemeContext)
+    const { theme, setTheme } = useTheme()
 
     return (
         <div className='button-container'>

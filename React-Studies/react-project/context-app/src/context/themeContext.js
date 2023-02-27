@@ -1,4 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
+import userEvent from '@testing-library/user-event';
+import { createContext, useState, useEffect, useContext } from 'react';
 
 const ThemeContext = createContext(null)
 
@@ -19,4 +20,7 @@ export const ThemeProvider = ({ children }) => {
     return <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>
 }
 
-export default ThemeContext;
+export const useTheme = () => useContext(ThemeContext)
+
+
+
