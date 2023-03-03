@@ -5,7 +5,7 @@ let socket;
 export const init = () => {
   console.log("sunucuya baglaniliyor");
 
-  socket = io("http://localhost:3001", {
+  socket = io("http://localhost:3003", {
     transports: ["websocket"],
   });
 
@@ -19,7 +19,7 @@ export const send = (color) => {
 };
 
 export const subscribe = (cb) => {
-  socket.on("receive", (color) => {
+  socket.on("send", (color) => {
     console.log(color, "receive from server");
     cb(color);
   });

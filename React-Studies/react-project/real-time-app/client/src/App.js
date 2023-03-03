@@ -5,19 +5,19 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-  const [activeColor, setActiveColor ] = useState('#020202')
+  const [color, setColor ] = useState('#020202')
 
   useEffect(() => {
     init();
 
     subscribe((color)=>{
-      setActiveColor(color);
+      setColor(color);
     });
   }, [])
 
   return (
-    <div className="container" style={{backgroundColor:`${activeColor}`}}>
-      <Palette activeColor={activeColor} />
+    <div className="container" style={{backgroundColor:`${color}`}}>
+      <Palette color={color} setColor={setColor} />
     </div>
   );
 }
